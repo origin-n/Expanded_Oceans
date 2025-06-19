@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "expandedoceans:block/stripped_ocean_willow_log",
+    "side": "expandedoceans:block/stripped_ocean_willow_log"
+  }
+}

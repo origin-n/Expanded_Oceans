@@ -1,13 +1,10 @@
 {
-  "itemGroup.expandedoceans": "Example Mod Tab",
-  "block.expandedoceans.example_block": "Example Block",
-  "item.expandedoceans.example_item": "Example Item",
+  "block.expandedoceans.ocean_willow_log": "Ocean Willow Log",
+  "block.expandedoceans.ocean_willow_planks": "Ocean Willow Planks",
+  "block.expandedoceans.ocean_willow_wood": "Ocean Willow Wood",
+  "block.expandedoceans.stripped_ocean_willow_log": "Stripped Ocean Willow Log",
+  "block.expandedoceans.stripped_ocean_willow_wood": "Stripped Ocean Willow Wood",
+  "block.expandedoceans.ocean_willow_leaves": "Ocean Willow Leaves",
 
-  "expandedoceans.configuration.title": "Expanded Oceans Configs",
-  "expandedoceans.configuration.section.expandedoceans.common.toml": "Expanded Oceans Configs",
-  "expandedoceans.configuration.section.expandedoceans.common.toml.title": "Expanded Oceans Configs",
-  "expandedoceans.configuration.items": "Item List",
-  "expandedoceans.configuration.logDirtBlock": "Log Dirt Block",
-  "expandedoceans.configuration.magicNumberIntroduction": "Magic Number Text",
-  "expandedoceans.configuration.magicNumber": "Magic Number"
+  "block.expandedoceans.ocean_willow_sapling": "Ocean Willow Sapling"
 }

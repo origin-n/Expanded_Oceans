@@ -13,6 +13,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.origin.expandedoceans.ExpandedOceans;
 import net.origin.expandedoceans.block.custom.ModLogBlock;
 import net.origin.expandedoceans.item.ModItems;
+import net.origin.expandedoceans.worldgen.tree.ModTreeGrowers;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,7 +41,7 @@ public class ModBlocks {
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LEAVES)));
 
     public static final DeferredBlock<Block> OCEAN_WILLOW_SAPLING = registerBlock("ocean_willow_sapling",
-            ()-> new SaplingBlock(, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
+            ()-> new SaplingBlock(ModTreeGrowers.OCEAN_WILLOW, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
 
     //Strippables Registry
     public static void registerStrippables(){

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "expandedoceans:block/ocean_willow_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "expandedoceans:block/ocean_willow_log"
+    },
+    "axis=z": {
+      "model": "expandedoceans:block/ocean_willow_log_horizontal",
+      "x": 90
+    }
+  }
+}
