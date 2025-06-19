@@ -1,0 +1,13 @@
+{
+  "itemGroup.expandedoceans": "Example Mod Tab",
+  "block.expandedoceans.example_block": "Example Block",
+  "item.expandedoceans.example_item": "Example Item",
+
+  "expandedoceans.configuration.title": "Expanded Oceans Configs",
+  "expandedoceans.configuration.section.expandedoceans.common.toml": "Expanded Oceans Configs",
+  "expandedoceans.configuration.section.expandedoceans.common.toml.title": "Expanded Oceans Configs",
+  "expandedoceans.configuration.items": "Item List",
+  "expandedoceans.configuration.logDirtBlock": "Log Dirt Block",
+  "expandedoceans.configuration.magicNumberIntroduction": "Magic Number Text",
+  "expandedoceans.configuration.magicNumber": "Magic Number"
+}
