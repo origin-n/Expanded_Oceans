@@ -49,7 +49,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<PressurePlateBlock> OCEAN_WILLOW_PRESSURE_PLATE = registerBlock("ocean_willow_pressure_plate",
             ()-> new PressurePlateBlock(BlockSetType.WARPED,BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PRESSURE_PLATE)));
-    public static final DeferredBlock<ButtonBlock> OCEAN_WILLOW_BUTTON = registerBlock("ocean_willow_buttom",
+    public static final DeferredBlock<ButtonBlock> OCEAN_WILLOW_BUTTON = registerBlock("ocean_willow_button",
             ()-> new ButtonBlock(BlockSetType.WARPED, 20, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_BUTTON)));
 
     public static final DeferredBlock<FenceBlock> OCEAN_WILLOW_FENCE = registerBlock("ocean_willow_fence",
@@ -87,7 +87,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<PressurePlateBlock> WATER_MAPLE_PRESSURE_PLATE = registerBlock("water_maple_pressure_plate",
             ()-> new PressurePlateBlock(BlockSetType.WARPED,BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PRESSURE_PLATE)));
-    public static final DeferredBlock<ButtonBlock> WATER_MAPLE_BUTTON = registerBlock("water_maple_buttom",
+    public static final DeferredBlock<ButtonBlock> WATER_MAPLE_BUTTON = registerBlock("water_maple_button",
             ()-> new ButtonBlock(BlockSetType.WARPED, 20, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_BUTTON)));
 
     public static final DeferredBlock<FenceBlock> WATER_MAPLE_FENCE = registerBlock("water_maple_fence",
