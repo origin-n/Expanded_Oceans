@@ -37,10 +37,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.FENCES)
                 .add(ModBlocks.OCEAN_WILLOW_FENCE.get())
+                .add(ModBlocks.WATER_MAPLE_FENCE.get())
         ;
 
         tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.OCEAN_WILLOW_FENCE_GATE.get())
+                .add(ModBlocks.WATER_MAPLE_FENCE_GATE.get())
         ;
 
         this.tag(BlockTags.LOGS)
