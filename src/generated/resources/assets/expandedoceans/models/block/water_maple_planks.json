@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "expandedoceans:block/water_maple_planks"
+  }
+}

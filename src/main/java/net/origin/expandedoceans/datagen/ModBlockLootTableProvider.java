@@ -39,6 +39,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.OCEAN_WILLOW_SAPLING.get());
 
         this.add(ModBlocks.OCEAN_WILLOW_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.OCEAN_WILLOW_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(ModBlocks.WATER_MAPLE_LOG.get());
+        this.dropSelf(ModBlocks.WATER_MAPLE_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_WATER_MAPLE_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_WATER_MAPLE_WOOD.get());
+        this.dropSelf(ModBlocks.WATER_MAPLE_PLANKS.get());
+        this.dropSelf(ModBlocks.WATER_MAPLE_SAPLING.get());
+
+        this.add(ModBlocks.WATER_MAPLE_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.WATER_MAPLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

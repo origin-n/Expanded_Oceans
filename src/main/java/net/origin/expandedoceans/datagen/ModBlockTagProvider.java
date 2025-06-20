@@ -38,7 +38,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.OCEAN_WILLOW_LOG.get())
                 .add(ModBlocks.OCEAN_WILLOW_WOOD.get())
                 .add(ModBlocks.STRIPPED_OCEAN_WILLOW_LOG.get())
-                .add(ModBlocks.STRIPPED_OCEAN_WILLOW_WOOD.get());
+                .add(ModBlocks.STRIPPED_OCEAN_WILLOW_WOOD.get())
+
+                .add(ModBlocks.WATER_MAPLE_LOG.get())
+                .add(ModBlocks.WATER_MAPLE_WOOD.get())
+                .add(ModBlocks.STRIPPED_WATER_MAPLE_LOG.get())
+                .add(ModBlocks.STRIPPED_WATER_MAPLE_WOOD.get());
 
 
 

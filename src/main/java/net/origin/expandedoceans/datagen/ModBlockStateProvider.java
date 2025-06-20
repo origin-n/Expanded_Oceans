@@ -39,6 +39,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         leavesBlock(ModBlocks.OCEAN_WILLOW_LEAVES);
         saplingBlock(ModBlocks.OCEAN_WILLOW_SAPLING);
+
+
+        logBlock(((RotatedPillarBlock) ModBlocks.WATER_MAPLE_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.WATER_MAPLE_WOOD.get()), blockTexture(ModBlocks.WATER_MAPLE_LOG.get()), blockTexture(ModBlocks.WATER_MAPLE_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_WATER_MAPLE_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_WATER_MAPLE_WOOD.get()), blockTexture(ModBlocks.STRIPPED_WATER_MAPLE_LOG.get()), blockTexture(ModBlocks.STRIPPED_WATER_MAPLE_LOG.get()));
+
+        blockItem(ModBlocks.WATER_MAPLE_LOG);
+        blockItem(ModBlocks.WATER_MAPLE_WOOD);
+        blockItem(ModBlocks.STRIPPED_WATER_MAPLE_LOG);
+        blockItem(ModBlocks.STRIPPED_WATER_MAPLE_WOOD);
+
+        blockWithItem(ModBlocks.WATER_MAPLE_PLANKS);
+
+        leavesBlock(ModBlocks.WATER_MAPLE_LEAVES);
+        saplingBlock(ModBlocks.WATER_MAPLE_SAPLING);
     }
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),

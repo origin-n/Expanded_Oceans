@@ -43,10 +43,30 @@ public class ModBlocks {
     public static final DeferredBlock<Block> OCEAN_WILLOW_SAPLING = registerBlock("ocean_willow_sapling",
             ()-> new SaplingBlock(ModTreeGrowers.OCEAN_WILLOW, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
 
+    //Water Maple
+    public static final DeferredBlock<Block> WATER_MAPLE_LOG = registerBlock("water_maple_log",
+            ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STEM)));
+    public static final DeferredBlock<Block> WATER_MAPLE_WOOD = registerBlock("water_maple_wood",
+            ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_HYPHAE)));
+    public static final DeferredBlock<Block> STRIPPED_WATER_MAPLE_LOG = registerBlock("stripped_water_maple_log",
+            ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_WARPED_STEM)));
+    public static final DeferredBlock<Block> STRIPPED_WATER_MAPLE_WOOD = registerBlock("stripped_water_maple_wood",
+            ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_WARPED_HYPHAE)));
+
+    public static final DeferredBlock<Block> WATER_MAPLE_PLANKS = registerBlock("water_maple_planks",
+            ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
+    public static final DeferredBlock<Block> WATER_MAPLE_LEAVES = registerBlock("water_maple_leaves",
+            ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LEAVES)));
+
+    public static final DeferredBlock<Block> WATER_MAPLE_SAPLING = registerBlock("water_maple_sapling",
+            ()-> new SaplingBlock(ModTreeGrowers.WATER_MAPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
+
     //Strippables Registry
     public static void registerStrippables(){
         STRIPPABLES.put(OCEAN_WILLOW_LOG.get(), STRIPPED_OCEAN_WILLOW_LOG.get());
         STRIPPABLES.put(OCEAN_WILLOW_WOOD.get(), STRIPPED_OCEAN_WILLOW_WOOD.get());
+        STRIPPABLES.put(WATER_MAPLE_LOG.get(), STRIPPED_WATER_MAPLE_LOG.get());
+        STRIPPABLES.put(WATER_MAPLE_WOOD.get(), STRIPPED_WATER_MAPLE_WOOD.get());
     }
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

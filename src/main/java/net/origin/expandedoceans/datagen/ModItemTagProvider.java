@@ -20,13 +20,19 @@ public class ModItemTagProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
 
         this.tag(ItemTags.PLANKS)
-                .add(ModBlocks.OCEAN_WILLOW_PLANKS.asItem());
+                .add(ModBlocks.OCEAN_WILLOW_PLANKS.asItem())
+                .add(ModBlocks.WATER_MAPLE_PLANKS.asItem());
 
         this.tag(ItemTags.LOGS)
                 .add(ModBlocks.OCEAN_WILLOW_LOG.asItem())
                 .add(ModBlocks.OCEAN_WILLOW_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_OCEAN_WILLOW_LOG.asItem())
-                .add(ModBlocks.STRIPPED_OCEAN_WILLOW_WOOD.asItem());
+                .add(ModBlocks.STRIPPED_OCEAN_WILLOW_WOOD.asItem())
+
+                .add(ModBlocks.WATER_MAPLE_LOG.asItem())
+                .add(ModBlocks.WATER_MAPLE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_WATER_MAPLE_LOG.asItem())
+                .add(ModBlocks.STRIPPED_WATER_MAPLE_WOOD.asItem());
 
 
     }

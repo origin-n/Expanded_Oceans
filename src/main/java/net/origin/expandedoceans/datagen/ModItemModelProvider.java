@@ -18,6 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         saplingItem(ModBlocks.OCEAN_WILLOW_SAPLING);
+        saplingItem(ModBlocks.WATER_MAPLE_SAPLING);
 
     }
 

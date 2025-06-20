@@ -6,5 +6,14 @@
   "block.expandedoceans.stripped_ocean_willow_wood": "Stripped Ocean Willow Wood",
   "block.expandedoceans.ocean_willow_leaves": "Ocean Willow Leaves",
 
-  "block.expandedoceans.ocean_willow_sapling": "Ocean Willow Sapling"
+  "block.expandedoceans.ocean_willow_sapling": "Ocean Willow Sapling",
+
+  "block.expandedoceans.water_maple_log": "Water Maple Log",
+  "block.expandedoceans.water_maple_planks": "Water Maple Planks",
+  "block.expandedoceans.water_maple_wood": "Water Maple Wood",
+  "block.expandedoceans.stripped_water_maple_log": "Stripped Water Maple Log",
+  "block.expandedoceans.stripped_water_maple_wood": "Stripped Water Maple Wood",
+  "block.expandedoceans.water_maple_leaves": "Water Maple Leaves",
+
+  "block.expandedoceans.water_maple_sapling": "Water Maple Sapling"
 }

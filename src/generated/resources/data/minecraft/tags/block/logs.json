@@ -3,6 +3,10 @@
     "expandedoceans:ocean_willow_log",
     "expandedoceans:ocean_willow_wood",
     "expandedoceans:stripped_ocean_willow_log",
-    "expandedoceans:stripped_ocean_willow_wood"
+    "expandedoceans:stripped_ocean_willow_wood",
+    "expandedoceans:water_maple_log",
+    "expandedoceans:water_maple_wood",
+    "expandedoceans:stripped_water_maple_log",
+    "expandedoceans:stripped_water_maple_wood"
   ]
 }

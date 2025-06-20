@@ -1,4 +1,4 @@
-// 1.21.1	2025-06-19T21:57:29.4773938	Loot Tables
+// 1.21.1	2025-06-20T14:54:59.1661897	Loot Tables
 c887015ea48938090d8cfd935977a47981f7ecb1 data/expandedoceans/loot_table/blocks/ocean_willow_leaves.json
 dc271891cc227987436459ebd13912a3128dd3de data/expandedoceans/loot_table/blocks/ocean_willow_log.json
 3d9dd04ebca465efc340c98da0d861e4923b247f data/expandedoceans/loot_table/blocks/ocean_willow_planks.json
@@ -6,3 +6,10 @@ d5d8c3a6d2df2b411d871de772d9baa7f60ad799 data/expandedoceans/loot_table/blocks/o
 ec3707081dc0dbb7d8cb767cfe91a12046ea9bc1 data/expandedoceans/loot_table/blocks/ocean_willow_wood.json
 d8fc4a277228c25c9dbac59c0ef93538214e8d9d data/expandedoceans/loot_table/blocks/stripped_ocean_willow_log.json
 fafca18acf5eed1d791ae92ecb6e971db4bb9c0b data/expandedoceans/loot_table/blocks/stripped_ocean_willow_wood.json
+367b2ddbf4398955e835231a189939e0c2003d07 data/expandedoceans/loot_table/blocks/stripped_water_maple_log.json
+10502d0c120fd2f86abb85fb41825a82c01e41ff data/expandedoceans/loot_table/blocks/stripped_water_maple_wood.json
+354838d8c7dae93b5d8e531593e43bc1f38eb568 data/expandedoceans/loot_table/blocks/water_maple_leaves.json
+fd0cfd6bd8b8ac9b06c05fe5701a3285c15516b0 data/expandedoceans/loot_table/blocks/water_maple_log.json
+4e990455cf5cbcc085985bf1b1a13e5a2bccf4bf data/expandedoceans/loot_table/blocks/water_maple_planks.json
+1fa32ccbb89235032036b72e97032688aad9f7a8 data/expandedoceans/loot_table/blocks/water_maple_sapling.json
+43420c57ce251ab0a780d93513eef0e5000c503f data/expandedoceans/loot_table/blocks/water_maple_wood.json

@@ -1,7 +1,9 @@
 package net.origin.expandedoceans;
 
 import net.origin.expandedoceans.block.ModBlocks;
+import net.origin.expandedoceans.item.ModCreativeModeTabs;
 import net.origin.expandedoceans.item.ModItems;
+import net.origin.expandedoceans.worldgen.ModConfiguredFeatures;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -36,6 +38,8 @@ public class ExpandedOceans {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

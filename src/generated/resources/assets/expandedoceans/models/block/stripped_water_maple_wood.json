@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "expandedoceans:block/stripped_water_maple_log",
+    "side": "expandedoceans:block/stripped_water_maple_log"
+  }
+}
