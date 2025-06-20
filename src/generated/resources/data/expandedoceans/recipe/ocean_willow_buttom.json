@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "ocean_willow",
+  "ingredients": [
+    {
+      "item": "expandedoceans:ocean_willow_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "expandedoceans:ocean_willow_buttom"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "ocean_willow",
+  "key": {
+    "#": {
+      "item": "expandedoceans:ocean_willow_planks"
+    }
+  },
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 3,
+    "id": "expandedoceans:ocean_willow_door"
+  }
+}

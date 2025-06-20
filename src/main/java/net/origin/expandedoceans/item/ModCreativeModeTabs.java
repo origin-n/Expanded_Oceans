@@ -30,6 +30,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.OCEAN_WILLOW_PLANKS.get());
                         output.accept(ModBlocks.OCEAN_WILLOW_LEAVES.get());
                         output.accept(ModBlocks.OCEAN_WILLOW_SAPLING.get());
+                        output.accept(ModBlocks.OCEAN_WILLOW_STAIRS.get());
+                        output.accept(ModBlocks.OCEAN_WILLOW_SLAB.get());
+                        output.accept(ModBlocks.OCEAN_WILLOW_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.OCEAN_WILLOW_BUTTON.get());
+                        output.accept(ModBlocks.OCEAN_WILLOW_FENCE.get());
+                        output.accept(ModBlocks.OCEAN_WILLOW_FENCE_GATE.get());
+                        output.accept(ModBlocks.OCEAN_WILLOW_DOOR.get());
+                        output.accept(ModBlocks.OCEAN_WILLOW_TRAPDOOR.get());
+
 
                         output.accept(ModBlocks.WATER_MAPLE_LOG.get());
                         output.accept(ModBlocks.WATER_MAPLE_WOOD.get());
@@ -38,6 +47,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.WATER_MAPLE_PLANKS.get());
                         output.accept(ModBlocks.WATER_MAPLE_LEAVES.get());
                         output.accept(ModBlocks.WATER_MAPLE_SAPLING.get());
+                        output.accept(ModBlocks.WATER_MAPLE_STAIRS.get());
+                        output.accept(ModBlocks.WATER_MAPLE_SLAB.get());
+                        output.accept(ModBlocks.WATER_MAPLE_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.WATER_MAPLE_BUTTON.get());
+                        output.accept(ModBlocks.WATER_MAPLE_FENCE.get());
+                        output.accept(ModBlocks.WATER_MAPLE_FENCE_GATE.get());
+                        output.accept(ModBlocks.WATER_MAPLE_DOOR.get());
+                        output.accept(ModBlocks.WATER_MAPLE_TRAPDOOR.get());
 
                     }).build());
 

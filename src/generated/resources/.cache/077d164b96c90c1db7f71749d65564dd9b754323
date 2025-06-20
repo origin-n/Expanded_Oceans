@@ -1,3 +1,5 @@
-// 1.21.1	2025-06-20T14:54:59.1671865	Tags for minecraft:item mod id expandedoceans
+// 1.21.1	2025-06-20T21:10:26.8363166	Tags for minecraft:item mod id expandedoceans
+eecea9ec55ed280c148fe62bafd7ee7b56141335 data/expandedoceans/tags/item/ocean_willow_logs.json
+5d55117abf1a00da25c106ab4d2fefc3e3de6ef0 data/expandedoceans/tags/item/water_maple_logs.json
 7d148cb973da0b8d8a60faf9d7959ad4f6509c80 data/minecraft/tags/item/logs.json
 b8233317ecc60c11b55e2ca98103d6cebc9a2268 data/minecraft/tags/item/planks.json

@@ -40,6 +40,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.OCEAN_WILLOW_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.OCEAN_WILLOW_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
+        dropSelf(ModBlocks.OCEAN_WILLOW_STAIRS.get());
+        add(ModBlocks.OCEAN_WILLOW_SLAB.get(), block -> createSlabItemTable(ModBlocks.OCEAN_WILLOW_SLAB.get()));
+
+        dropSelf(ModBlocks.OCEAN_WILLOW_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.OCEAN_WILLOW_BUTTON.get());
+        dropSelf(ModBlocks.OCEAN_WILLOW_FENCE.get());
+        dropSelf(ModBlocks.OCEAN_WILLOW_FENCE_GATE.get());
+        dropSelf(ModBlocks.OCEAN_WILLOW_TRAPDOOR.get());
+        add(ModBlocks.OCEAN_WILLOW_DOOR.get(), block -> createDoorTable(ModBlocks.OCEAN_WILLOW_DOOR.get()));
+
         this.dropSelf(ModBlocks.WATER_MAPLE_LOG.get());
         this.dropSelf(ModBlocks.WATER_MAPLE_WOOD.get());
         this.dropSelf(ModBlocks.STRIPPED_WATER_MAPLE_LOG.get());
@@ -48,6 +58,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.WATER_MAPLE_SAPLING.get());
 
         this.add(ModBlocks.WATER_MAPLE_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.WATER_MAPLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        dropSelf(ModBlocks.WATER_MAPLE_STAIRS.get());
+        add(ModBlocks.WATER_MAPLE_SLAB.get(), block -> createSlabItemTable(ModBlocks.WATER_MAPLE_SLAB.get()));
+
+        dropSelf(ModBlocks.WATER_MAPLE_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.WATER_MAPLE_BUTTON.get());
+        dropSelf(ModBlocks.WATER_MAPLE_FENCE.get());
+        dropSelf(ModBlocks.WATER_MAPLE_FENCE_GATE.get());
+        dropSelf(ModBlocks.WATER_MAPLE_TRAPDOOR.get());
+        add(ModBlocks.WATER_MAPLE_DOOR.get(), block -> createDoorTable(ModBlocks.WATER_MAPLE_DOOR.get()));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

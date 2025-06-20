@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.origin.expandedoceans.ExpandedOceans;
 import net.origin.expandedoceans.block.ModBlocks;
+import net.origin.expandedoceans.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
@@ -33,6 +34,20 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModBlocks.WATER_MAPLE_WOOD.asItem())
                 .add(ModBlocks.STRIPPED_WATER_MAPLE_LOG.asItem())
                 .add(ModBlocks.STRIPPED_WATER_MAPLE_WOOD.asItem());
+
+        this.tag(ModTags.Items.OCEAN_WILLOW_LOGS)
+                .add(ModBlocks.OCEAN_WILLOW_LOG.asItem())
+                .add(ModBlocks.STRIPPED_OCEAN_WILLOW_LOG.asItem())
+                .add(ModBlocks.OCEAN_WILLOW_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_OCEAN_WILLOW_WOOD.asItem())
+            ;
+
+        this.tag(ModTags.Items.WATER_MAPLE_LOGS)
+                .add(ModBlocks.WATER_MAPLE_LOG.asItem())
+                .add(ModBlocks.WATER_MAPLE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_WATER_MAPLE_LOG.asItem())
+                .add(ModBlocks.STRIPPED_WATER_MAPLE_WOOD.asItem())
+            ;
 
 
     }

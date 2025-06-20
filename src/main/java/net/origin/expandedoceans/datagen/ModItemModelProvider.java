@@ -18,8 +18,37 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         saplingItem(ModBlocks.OCEAN_WILLOW_SAPLING);
+
+        buttonItem(ModBlocks.OCEAN_WILLOW_BUTTON, ModBlocks.OCEAN_WILLOW_PLANKS);
+        fenceItem(ModBlocks.OCEAN_WILLOW_FENCE, ModBlocks.OCEAN_WILLOW_PLANKS);
+
+        basicItem(ModBlocks.OCEAN_WILLOW_DOOR.asItem());
+
         saplingItem(ModBlocks.WATER_MAPLE_SAPLING);
 
+        buttonItem(ModBlocks.WATER_MAPLE_BUTTON, ModBlocks.WATER_MAPLE_PLANKS);
+        fenceItem(ModBlocks.WATER_MAPLE_FENCE, ModBlocks.WATER_MAPLE_PLANKS);
+
+        basicItem(ModBlocks.WATER_MAPLE_DOOR.asItem());
+
+    }
+
+    public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(ExpandedOceans.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
+    public void fenceItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(ExpandedOceans.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
+    public void wallItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  ResourceLocation.fromNamespaceAndPath(ExpandedOceans.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
     }
 
     private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "expandedoceans:block/ocean_willow_planks"
+  }
+}

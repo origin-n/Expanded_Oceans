@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "expandedoceans:block/ocean_willow_slab"
+    },
+    "type=double": {
+      "model": "expandedoceans:block/ocean_willow_planks"
+    },
+    "type=top": {
+      "model": "expandedoceans:block/ocean_willow_slab_top"
+    }
+  }
+}

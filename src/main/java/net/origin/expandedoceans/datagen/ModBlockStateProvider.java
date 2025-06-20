@@ -40,6 +40,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.OCEAN_WILLOW_LEAVES);
         saplingBlock(ModBlocks.OCEAN_WILLOW_SAPLING);
 
+        stairsBlock(ModBlocks.OCEAN_WILLOW_STAIRS.get(), blockTexture(ModBlocks.OCEAN_WILLOW_PLANKS.get()));
+        slabBlock(ModBlocks.OCEAN_WILLOW_SLAB.get(), blockTexture(ModBlocks.OCEAN_WILLOW_PLANKS.get()), blockTexture(ModBlocks.OCEAN_WILLOW_PLANKS.get()));
+        buttonBlock(ModBlocks.OCEAN_WILLOW_BUTTON.get(), blockTexture(ModBlocks.OCEAN_WILLOW_PLANKS.get()));
+        pressurePlateBlock(ModBlocks.OCEAN_WILLOW_PRESSURE_PLATE.get(), blockTexture(ModBlocks.OCEAN_WILLOW_PLANKS.get()));
+        fenceBlock(ModBlocks.OCEAN_WILLOW_FENCE.get(), blockTexture(ModBlocks.OCEAN_WILLOW_PLANKS.get()));
+        fenceGateBlock(ModBlocks.OCEAN_WILLOW_FENCE_GATE.get(), blockTexture(ModBlocks.OCEAN_WILLOW_PLANKS.get()));
+
+        doorBlockWithRenderType(ModBlocks.OCEAN_WILLOW_DOOR.get(), modLoc("block/ocean_willow_door_bottom"), modLoc("block/ocean_willow_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.OCEAN_WILLOW_TRAPDOOR.get(), modLoc("block/ocean_willow_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.OCEAN_WILLOW_STAIRS);
+        blockItem(ModBlocks.OCEAN_WILLOW_SLAB);
+        blockItem(ModBlocks.OCEAN_WILLOW_PRESSURE_PLATE);
+        blockItem(ModBlocks.OCEAN_WILLOW_FENCE_GATE);
+        blockItem(ModBlocks.OCEAN_WILLOW_TRAPDOOR, "_bottom");
+
 
         logBlock(((RotatedPillarBlock) ModBlocks.WATER_MAPLE_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.WATER_MAPLE_WOOD.get()), blockTexture(ModBlocks.WATER_MAPLE_LOG.get()), blockTexture(ModBlocks.WATER_MAPLE_LOG.get()));
@@ -55,6 +71,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         leavesBlock(ModBlocks.WATER_MAPLE_LEAVES);
         saplingBlock(ModBlocks.WATER_MAPLE_SAPLING);
+
+        stairsBlock(ModBlocks.WATER_MAPLE_STAIRS.get(), blockTexture(ModBlocks.WATER_MAPLE_PLANKS.get()));
+        slabBlock(ModBlocks.WATER_MAPLE_SLAB.get(), blockTexture(ModBlocks.WATER_MAPLE_PLANKS.get()), blockTexture(ModBlocks.WATER_MAPLE_PLANKS.get()));
+        buttonBlock(ModBlocks.WATER_MAPLE_BUTTON.get(), blockTexture(ModBlocks.WATER_MAPLE_PLANKS.get()));
+        pressurePlateBlock(ModBlocks.WATER_MAPLE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.WATER_MAPLE_PLANKS.get()));
+        fenceBlock(ModBlocks.WATER_MAPLE_FENCE.get(), blockTexture(ModBlocks.WATER_MAPLE_PLANKS.get()));
+        fenceGateBlock(ModBlocks.WATER_MAPLE_FENCE_GATE.get(), blockTexture(ModBlocks.WATER_MAPLE_PLANKS.get()));
+
+        doorBlockWithRenderType(ModBlocks.WATER_MAPLE_DOOR.get(), modLoc("block/water_maple_door_bottom"), modLoc("block/water_maple_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.WATER_MAPLE_TRAPDOOR.get(), modLoc("block/water_maple_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.WATER_MAPLE_STAIRS);
+        blockItem(ModBlocks.WATER_MAPLE_SLAB);
+        blockItem(ModBlocks.WATER_MAPLE_PRESSURE_PLATE);
+        blockItem(ModBlocks.WATER_MAPLE_FENCE_GATE);
+        blockItem(ModBlocks.WATER_MAPLE_TRAPDOOR, "_bottom");
     }
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),

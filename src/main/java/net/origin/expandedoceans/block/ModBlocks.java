@@ -2,11 +2,10 @@ package net.origin.expandedoceans.block;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -43,6 +42,26 @@ public class ModBlocks {
     public static final DeferredBlock<Block> OCEAN_WILLOW_SAPLING = registerBlock("ocean_willow_sapling",
             ()-> new SaplingBlock(ModTreeGrowers.OCEAN_WILLOW, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
 
+    public static final DeferredBlock<StairBlock> OCEAN_WILLOW_STAIRS = registerBlock("ocean_willow_stairs",
+            ()-> new StairBlock(ModBlocks.OCEAN_WILLOW_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STAIRS)));
+    public static final DeferredBlock<SlabBlock> OCEAN_WILLOW_SLAB = registerBlock("ocean_willow_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_SLAB)));
+
+    public static final DeferredBlock<PressurePlateBlock> OCEAN_WILLOW_PRESSURE_PLATE = registerBlock("ocean_willow_pressure_plate",
+            ()-> new PressurePlateBlock(BlockSetType.WARPED,BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PRESSURE_PLATE)));
+    public static final DeferredBlock<ButtonBlock> OCEAN_WILLOW_BUTTON = registerBlock("ocean_willow_buttom",
+            ()-> new ButtonBlock(BlockSetType.WARPED, 20, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_BUTTON)));
+
+    public static final DeferredBlock<FenceBlock> OCEAN_WILLOW_FENCE = registerBlock("ocean_willow_fence",
+            ()-> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_FENCE)));
+    public static final DeferredBlock<FenceGateBlock> OCEAN_WILLOW_FENCE_GATE = registerBlock("ocean_willow_fence_gate",
+            ()-> new FenceGateBlock(WoodType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_FENCE_GATE)));
+
+    public static final DeferredBlock<DoorBlock> OCEAN_WILLOW_DOOR = registerBlock("ocean_willow_door",
+            ()-> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_DOOR)));
+    public static final DeferredBlock<TrapDoorBlock> OCEAN_WILLOW_TRAPDOOR = registerBlock("ocean_willow_trapdoor",
+            ()-> new TrapDoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_TRAPDOOR)));
+
     //Water Maple
     public static final DeferredBlock<Block> WATER_MAPLE_LOG = registerBlock("water_maple_log",
             ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STEM)));
@@ -60,6 +79,26 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> WATER_MAPLE_SAPLING = registerBlock("water_maple_sapling",
             ()-> new SaplingBlock(ModTreeGrowers.WATER_MAPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
+
+    public static final DeferredBlock<StairBlock> WATER_MAPLE_STAIRS = registerBlock("water_maple_stairs",
+            ()-> new StairBlock(ModBlocks.WATER_MAPLE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STAIRS)));
+    public static final DeferredBlock<SlabBlock> WATER_MAPLE_SLAB = registerBlock("ocean_willow_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_SLAB)));
+
+    public static final DeferredBlock<PressurePlateBlock> WATER_MAPLE_PRESSURE_PLATE = registerBlock("water_maple_pressure_plate",
+            ()-> new PressurePlateBlock(BlockSetType.WARPED,BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PRESSURE_PLATE)));
+    public static final DeferredBlock<ButtonBlock> WATER_MAPLE_BUTTON = registerBlock("water_maple_buttom",
+            ()-> new ButtonBlock(BlockSetType.WARPED, 20, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_BUTTON)));
+
+    public static final DeferredBlock<FenceBlock> WATER_MAPLE_FENCE = registerBlock("water_maple_fence",
+            ()-> new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_FENCE)));
+    public static final DeferredBlock<FenceGateBlock> WATER_MAPLE_FENCE_GATE = registerBlock("water_maple_fence_gate",
+            ()-> new FenceGateBlock(WoodType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_FENCE_GATE)));
+
+    public static final DeferredBlock<DoorBlock> WATER_MAPLE_DOOR = registerBlock("water_maple_door",
+            ()-> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_DOOR)));
+    public static final DeferredBlock<TrapDoorBlock> WATER_MAPLE_TRAPDOOR = registerBlock("water_maple_trapdoor",
+            ()-> new TrapDoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_TRAPDOOR)));
 
     //Strippables Registry
     public static void registerStrippables(){

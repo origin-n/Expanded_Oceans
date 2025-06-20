@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "expandedoceans:block/ocean_willow_pressure_plate"
+    },
+    "powered=true": {
+      "model": "expandedoceans:block/ocean_willow_pressure_plate_down"
+    }
+  }
+}

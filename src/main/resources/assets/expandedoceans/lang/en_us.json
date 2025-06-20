@@ -1,12 +1,21 @@
 {
+  "creativetab.expandedoceans.expanded_oceans": "Expanded Oceans",
+
   "block.expandedoceans.ocean_willow_log": "Ocean Willow Log",
   "block.expandedoceans.ocean_willow_planks": "Ocean Willow Planks",
   "block.expandedoceans.ocean_willow_wood": "Ocean Willow Wood",
   "block.expandedoceans.stripped_ocean_willow_log": "Stripped Ocean Willow Log",
   "block.expandedoceans.stripped_ocean_willow_wood": "Stripped Ocean Willow Wood",
   "block.expandedoceans.ocean_willow_leaves": "Ocean Willow Leaves",
-
   "block.expandedoceans.ocean_willow_sapling": "Ocean Willow Sapling",
+  "block.expandedoceans.ocean_willow_stairs": "Ocean Willow Stairs",
+  "block.expandedoceans.ocean_willow_slab": "Ocean Willow Slab",
+  "block.expandedoceans.ocean_willow_pressure_plate": "Ocean Willow Pressure Plate",
+  "block.expandedoceans.ocean_willow_button": "Ocean Willow Button",
+  "block.expandedoceans.ocean_willow_fence": "Ocean Willow Fence",
+  "block.expandedoceans.ocean_willow_fence_gate": "Ocean Willow Fence Gate",
+  "block.expandedoceans.ocean_willow_door": "Ocean Willow Door",
+  "block.expandedoceans.ocean_willow_trapdoor": "Ocean Willow Trapdoor",
 
   "block.expandedoceans.water_maple_log": "Water Maple Log",
   "block.expandedoceans.water_maple_planks": "Water Maple Planks",
@@ -14,6 +23,13 @@
   "block.expandedoceans.stripped_water_maple_log": "Stripped Water Maple Log",
   "block.expandedoceans.stripped_water_maple_wood": "Stripped Water Maple Wood",
   "block.expandedoceans.water_maple_leaves": "Water Maple Leaves",
-
-  "block.expandedoceans.water_maple_sapling": "Water Maple Sapling"
+  "block.expandedoceans.water_maple_sapling": "Water Maple Sapling",
+  "block.expandedoceans.water_maple_stairs": "Water Maple Stairs",
+  "block.expandedoceans.water_maple_slab": "Water Maple Slab",
+  "block.expandedoceans.water_maple_pressure_plate": "Water Maple Pressure Plate",
+  "block.expandedoceans.water_maple_button": "Water Maple Button",
+  "block.expandedoceans.water_maple_fence": "Water Maple Fence",
+  "block.expandedoceans.water_maple_fence_gate": "Water Maple Fence Gate",
+  "block.expandedoceans.water_maple_door": "Water Maple Door",
+  "block.expandedoceans.water_maple_trapdoor": "Water Maple Trapdoor"
 }

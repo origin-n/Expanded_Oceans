@@ -7,6 +7,7 @@ import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.origin.expandedoceans.ExpandedOceans;
 import net.origin.expandedoceans.block.ModBlocks;
+import net.origin.expandedoceans.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -34,6 +35,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         ;
 
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.OCEAN_WILLOW_FENCE.get())
+        ;
+
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.OCEAN_WILLOW_FENCE_GATE.get())
+        ;
+
         this.tag(BlockTags.LOGS)
                 .add(ModBlocks.OCEAN_WILLOW_LOG.get())
                 .add(ModBlocks.OCEAN_WILLOW_WOOD.get())
@@ -44,8 +53,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.WATER_MAPLE_WOOD.get())
                 .add(ModBlocks.STRIPPED_WATER_MAPLE_LOG.get())
                 .add(ModBlocks.STRIPPED_WATER_MAPLE_WOOD.get());
-
-
 
     }
 }
