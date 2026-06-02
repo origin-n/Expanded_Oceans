@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "expandedoceans:block/ocean_willow_planks"
+  }
+}

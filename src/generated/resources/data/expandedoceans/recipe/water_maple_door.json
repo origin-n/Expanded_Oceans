@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "water_maple",
+  "key": {
+    "#": {
+      "item": "expandedoceans:water_maple_planks"
+    }
+  },
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 3,
+    "id": "expandedoceans:water_maple_door"
+  }
+}

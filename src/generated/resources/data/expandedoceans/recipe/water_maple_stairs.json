@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "water_maple",
+  "key": {
+    "#": {
+      "item": "expandedoceans:water_maple_planks"
+    }
+  },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "result": {
+    "count": 4,
+    "id": "expandedoceans:water_maple_stairs"
+  }
+}

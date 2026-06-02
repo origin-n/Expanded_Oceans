@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "expandedoceans:block/water_maple_slab"
+    },
+    "type=double": {
+      "model": "expandedoceans:block/water_maple_planks"
+    },
+    "type=top": {
+      "model": "expandedoceans:block/water_maple_slab_top"
+    }
+  }
+}
