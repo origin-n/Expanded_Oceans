@@ -28,13 +28,15 @@ public class ModPlacedFeatures {
         register(context, RED_SEAGRASS_PATCH_PLACED_KEY, redSeagrassPatch, List.of(
                 RarityFilter.onAverageOnceEvery(8),
                 InSquarePlacement.spread(),
-                PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
                 BiomeFilter.biome()));
         register(context, RED_SEAGRASS_PATCH_BONEMEAL_KEY, redSeagrassPatch, List.of());
 
-        register(context, OCEAN_WILLOW_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OCEAN_WILLOW_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
-                        ModBlocks.OCEAN_WILLOW_SAPLING.get()));
+        register(context, OCEAN_WILLOW_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OCEAN_WILLOW_KEY),  List.of(
+                CountPlacement.of(3),
+                InSquarePlacement.spread(),
+                PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
+                BiomeFilter.biome()));
 
     }
 

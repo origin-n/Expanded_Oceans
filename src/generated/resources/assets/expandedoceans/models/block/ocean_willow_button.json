@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "expandedoceans:block/ocean_willow_planks"
+  }
+}

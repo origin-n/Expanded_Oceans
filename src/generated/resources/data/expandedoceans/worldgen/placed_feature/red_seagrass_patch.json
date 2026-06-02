@@ -1,9 +1,9 @@
 {
-  "feature": "expandedoceans:ocean_willow",
+  "feature": "expandedoceans:red_seagrass_patch",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": 3
+      "type": "minecraft:rarity_filter",
+      "chance": 8
     },
     {
       "type": "minecraft:in_square"

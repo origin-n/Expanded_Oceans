@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "water_maple",
+  "ingredients": [
+    {
+      "item": "expandedoceans:water_maple_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "expandedoceans:water_maple_button"
+  }
+}

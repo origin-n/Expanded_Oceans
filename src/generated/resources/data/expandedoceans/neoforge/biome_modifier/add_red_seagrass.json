@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
   "biomes": "minecraft:deep_ocean",
-  "features": "expandedoceans:ocean_willow_placed",
+  "features": "expandedoceans:red_seagrass_patch",
   "step": "vegetal_decoration"
 }
