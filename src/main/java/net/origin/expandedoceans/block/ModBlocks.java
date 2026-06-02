@@ -11,6 +11,9 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.origin.expandedoceans.ExpandedOceans;
 import net.origin.expandedoceans.block.custom.ModLogBlock;
+import net.origin.expandedoceans.block.custom.ModSeagrassBlock;
+import net.origin.expandedoceans.block.custom.ModWaterloggableSaplingBlock;
+import net.origin.expandedoceans.block.custom.ModWhiteSand;
 import net.origin.expandedoceans.item.ModItems;
 import net.origin.expandedoceans.worldgen.tree.ModTreeGrowers;
 
@@ -21,10 +24,20 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ExpandedOceans.MOD_ID);
 
-    //Woods
-    //Ocean Willow
-    public static final Map<Block, Block> STRIPPABLES = new HashMap<>();
+    public static final DeferredBlock<Block> WHITE_SAND = registerBlock("white_sand",
+            ()-> new ModWhiteSand(BlockBehaviour.Properties.ofFullCopy(Blocks.SAND)));
 
+    public static final Map<Block, Block> BONEMEAL_RESULT = new HashMap<>();
+
+    public static final DeferredBlock<Block> RED_SEAGRASS = registerBlock("red_seagrass",
+            ()-> new ModSeagrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion()));
+    public static final DeferredBlock<TallSeagrassBlock> TALL_RED_SEAGRASS = registerBlock("tall_red_seagrass",
+            ()-> new TallSeagrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_SEAGRASS).noOcclusion()));
+
+
+    //Woods
+    public static final Map<Block, Block> STRIPPABLES = new HashMap<>();
+    //Ocean Willow
     public static final DeferredBlock<Block> OCEAN_WILLOW_LOG = registerBlock("ocean_willow_log",
             ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STEM)));
     public static final DeferredBlock<Block> OCEAN_WILLOW_WOOD = registerBlock("ocean_willow_wood",
@@ -37,10 +50,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> OCEAN_WILLOW_PLANKS = registerBlock("ocean_willow_planks",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
     public static final DeferredBlock<Block> OCEAN_WILLOW_LEAVES = registerBlock("ocean_willow_leaves",
-            ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LEAVES)));
+            ()-> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LEAVES)));
 
     public static final DeferredBlock<Block> OCEAN_WILLOW_SAPLING = registerBlock("ocean_willow_sapling",
-            ()-> new SaplingBlock(ModTreeGrowers.OCEAN_WILLOW, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
+            ()-> new ModWaterloggableSaplingBlock(ModTreeGrowers.OCEAN_WILLOW, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
 
     public static final DeferredBlock<StairBlock> OCEAN_WILLOW_STAIRS = registerBlock("ocean_willow_stairs",
             ()-> new StairBlock(ModBlocks.OCEAN_WILLOW_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STAIRS)));
@@ -75,14 +88,14 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WATER_MAPLE_PLANKS = registerBlock("water_maple_planks",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
     public static final DeferredBlock<Block> WATER_MAPLE_LEAVES = registerBlock("water_maple_leaves",
-            ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LEAVES)));
+            ()-> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LEAVES)));
 
     public static final DeferredBlock<Block> WATER_MAPLE_SAPLING = registerBlock("water_maple_sapling",
-            ()-> new SaplingBlock(ModTreeGrowers.WATER_MAPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
+            ()-> new ModWaterloggableSaplingBlock(ModTreeGrowers.WATER_MAPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
 
     public static final DeferredBlock<StairBlock> WATER_MAPLE_STAIRS = registerBlock("water_maple_stairs",
             ()-> new StairBlock(ModBlocks.WATER_MAPLE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STAIRS)));
-    public static final DeferredBlock<SlabBlock> WATER_MAPLE_SLAB = registerBlock("ocean_willow_slab",
+    public static final DeferredBlock<SlabBlock> WATER_MAPLE_SLAB = registerBlock("water_maple_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_SLAB)));
 
     public static final DeferredBlock<PressurePlateBlock> WATER_MAPLE_PRESSURE_PLATE = registerBlock("water_maple_pressure_plate",
@@ -101,11 +114,12 @@ public class ModBlocks {
             ()-> new TrapDoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_TRAPDOOR)));
 
     //Strippables Registry
-    public static void registerStrippables(){
+    public static void registerMaps(){
         STRIPPABLES.put(OCEAN_WILLOW_LOG.get(), STRIPPED_OCEAN_WILLOW_LOG.get());
         STRIPPABLES.put(OCEAN_WILLOW_WOOD.get(), STRIPPED_OCEAN_WILLOW_WOOD.get());
         STRIPPABLES.put(WATER_MAPLE_LOG.get(), STRIPPED_WATER_MAPLE_LOG.get());
         STRIPPABLES.put(WATER_MAPLE_WOOD.get(), STRIPPED_WATER_MAPLE_WOOD.get());
+        BONEMEAL_RESULT.put(RED_SEAGRASS.get(), TALL_RED_SEAGRASS.get());
     }
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
@@ -125,7 +139,7 @@ public class ModBlocks {
 
     private static void onBlocksRegistered(net.neoforged.neoforge.registries.RegisterEvent event) {
         if (event.getRegistryKey() == net.minecraft.core.registries.Registries.BLOCK) {
-            registerStrippables();
+            registerMaps();
         }
     }
 }

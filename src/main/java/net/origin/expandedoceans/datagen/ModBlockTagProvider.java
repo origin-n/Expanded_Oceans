@@ -35,6 +35,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         ;
 
+        tag(BlockTags.SAND).add(ModBlocks.WHITE_SAND.get());
+
         tag(BlockTags.FENCES)
                 .add(ModBlocks.OCEAN_WILLOW_FENCE.get())
                 .add(ModBlocks.WATER_MAPLE_FENCE.get())

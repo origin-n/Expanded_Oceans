@@ -4,18 +4,17 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.TallSeagrassBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.origin.expandedoceans.ExpandedOceans;
 import net.origin.expandedoceans.block.ModBlocks;
-
-import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
 
@@ -25,6 +24,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        blockWithItem(ModBlocks.WHITE_SAND);
+        saplingBlock(ModBlocks.RED_SEAGRASS);
+        tallSeagrassBlock(ModBlocks.TALL_RED_SEAGRASS);
+
+
         logBlock(((RotatedPillarBlock) ModBlocks.OCEAN_WILLOW_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.OCEAN_WILLOW_WOOD.get()), blockTexture(ModBlocks.OCEAN_WILLOW_LOG.get()), blockTexture(ModBlocks.OCEAN_WILLOW_LOG.get()));
         logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_OCEAN_WILLOW_LOG.get()));
@@ -88,6 +92,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.WATER_MAPLE_FENCE_GATE);
         blockItem(ModBlocks.WATER_MAPLE_TRAPDOOR, "_bottom");
     }
+
+    private void tallSeagrassBlock(DeferredBlock<TallSeagrassBlock> deferredBlock) {
+        ModelFile bottom = models().cross(deferredBlock.getId().getPath() + "_bottom", modLoc("block/" + deferredBlock.getId().getPath() + "_bottom")).renderType("cutout");
+        ModelFile top = models().cross(deferredBlock.getId().getPath() + "_top", modLoc("block/" + deferredBlock.getId().getPath() + "_top")).renderType("cutout");
+        getVariantBuilder(deferredBlock.get())
+                .partialState().with(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER)
+                .modelForState().modelFile(bottom).addModel()
+                .partialState().with(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.UPPER)
+                .modelForState().modelFile(top).addModel();
+        simpleBlockItem(deferredBlock.get(), bottom);
+    }
+
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(),
                 models().cross(BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));

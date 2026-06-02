@@ -56,6 +56,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.WATER_MAPLE_DOOR.get());
                         output.accept(ModBlocks.WATER_MAPLE_TRAPDOOR.get());
 
+                        output.accept(ModBlocks.RED_SEAGRASS.get());
+                        output.accept(ModBlocks.TALL_RED_SEAGRASS.get());
+                        output.accept(ModBlocks.TALL_RED_SEAGRASS.get());
+
                     }).build());
 
     public static void register(IEventBus eventBus) {

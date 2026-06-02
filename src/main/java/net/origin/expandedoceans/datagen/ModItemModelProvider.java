@@ -17,6 +17,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        saplingItem(ModBlocks.RED_SEAGRASS);
+
         saplingItem(ModBlocks.OCEAN_WILLOW_SAPLING);
 
         buttonItem(ModBlocks.OCEAN_WILLOW_BUTTON, ModBlocks.OCEAN_WILLOW_PLANKS);

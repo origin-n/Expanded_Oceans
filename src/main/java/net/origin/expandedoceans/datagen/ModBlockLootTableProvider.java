@@ -5,6 +5,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -31,6 +32,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        this.dropSelf(ModBlocks.WHITE_SAND.get());
+        this.add(ModBlocks.RED_SEAGRASS.get(), BlockLootSubProvider::createShearsOnlyDrop);
+        this.add(ModBlocks.TALL_RED_SEAGRASS.get(), this.createDoublePlantShearsDrop(ModBlocks.TALL_RED_SEAGRASS.get()));
+
+
         this.dropSelf(ModBlocks.OCEAN_WILLOW_LOG.get());
         this.dropSelf(ModBlocks.OCEAN_WILLOW_WOOD.get());
         this.dropSelf(ModBlocks.STRIPPED_OCEAN_WILLOW_LOG.get());
