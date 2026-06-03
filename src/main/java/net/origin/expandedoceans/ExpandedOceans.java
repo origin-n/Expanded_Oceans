@@ -17,14 +17,17 @@ import net.origin.expandedoceans.block.ModBlocks;
 import net.origin.expandedoceans.item.ModCreativeModeTabs;
 import net.origin.expandedoceans.item.ModItems;
 import net.origin.expandedoceans.worldgen.custom_features.ModFeatures;
+import net.origin.expandedoceans.worldgen.terrablender.ExpandedOceansRegion;
+import net.origin.expandedoceans.worldgen.ModSurfaceRuleData;
 import net.origin.expandedoceans.worldgen.tree.trunk.ModTrunkPlacers;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(ExpandedOceans.MOD_ID)
 public class ExpandedOceans {
     public static final String MOD_ID = "expandedoceans";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public ExpandedOceans(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
@@ -51,7 +54,8 @@ public class ExpandedOceans {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-
+        event.enqueueWork(ExpandedOceansRegion::register);
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRuleData.makeRules());
     }
 
     // Add the example block item to the building blocks tab

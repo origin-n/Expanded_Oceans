@@ -10,6 +10,7 @@ import net.origin.expandedoceans.ExpandedOceans;
 import net.origin.expandedoceans.block.ModBlocks;
 import net.origin.expandedoceans.util.ModTags;
 import org.jetbrains.annotations.Nullable;
+
 import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends ItemTagsProvider {

@@ -7,7 +7,6 @@ import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.origin.expandedoceans.ExpandedOceans;
 import net.origin.expandedoceans.block.ModBlocks;
-import net.origin.expandedoceans.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;

@@ -1,6 +1,7 @@
-// 1.21.1	2026-06-03T16:19:19.3039025	Registries
+// 1.21.1	2026-06-03T20:58:13.1650465	Registries
 af4ec333ca5ec1221a166fb47469ade43749bb0f data/expandedoceans/neoforge/biome_modifier/add_ocean_willow.json
 456cc91a706584944984233125f871e5aec4c120 data/expandedoceans/neoforge/biome_modifier/add_red_seagrass.json
+0f1a568014b22b5f0c9c7e864ee31b54ed90ccac data/expandedoceans/worldgen/biome/red_grassy_plateaus.json
 a0983774536881e0a9eb7eb9c2e19366cea22a6c data/expandedoceans/worldgen/configured_feature/ocean_willow.json
 71fd59d94c1abd2b91b38dca290682d6fd3bf00c data/expandedoceans/worldgen/configured_feature/red_seagrass_patch.json
 13f294b007f615f7fc195b29cc7ac739665ef1c9 data/expandedoceans/worldgen/configured_feature/sparse_red_seagrass_patch.json
