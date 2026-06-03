@@ -1,13 +1,6 @@
 package net.origin.expandedoceans;
 
-import net.origin.expandedoceans.block.ModBlocks;
-import net.origin.expandedoceans.item.ModCreativeModeTabs;
-import net.origin.expandedoceans.item.ModItems;
-import net.origin.expandedoceans.worldgen.ModConfiguredFeatures;
-import org.slf4j.Logger;
-
 import com.mojang.logging.LogUtils;
-
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -20,6 +13,12 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.origin.expandedoceans.block.ModBlocks;
+import net.origin.expandedoceans.item.ModCreativeModeTabs;
+import net.origin.expandedoceans.item.ModItems;
+import net.origin.expandedoceans.worldgen.custom_features.ModFeatures;
+import net.origin.expandedoceans.worldgen.tree.trunk.ModTrunkPlacers;
+import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(ExpandedOceans.MOD_ID)
@@ -40,6 +39,9 @@ public class ExpandedOceans {
         ModBlocks.register(modEventBus);
 
         ModCreativeModeTabs.register(modEventBus);
+
+        ModTrunkPlacers.register(modEventBus);
+        ModFeatures.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

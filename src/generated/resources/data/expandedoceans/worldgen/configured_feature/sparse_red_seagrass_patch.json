@@ -1,7 +1,7 @@
 {
   "type": "expandedoceans:mod_seagrass",
   "config": {
-    "patch_attempts": 40,
+    "patch_attempts": 10,
     "patch_radius": 4,
     "probability": 0.3,
     "short_seagrass": {

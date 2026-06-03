@@ -1,17 +1,14 @@
 package net.origin.expandedoceans.item;
 
 
-import net.origin.expandedoceans.block.ModBlocks;
-import net.origin.expandedoceans.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.origin.expandedoceans.ExpandedOceans;
-
+import net.origin.expandedoceans.block.ModBlocks;
 
 import java.util.function.Supplier;
 
@@ -58,7 +55,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.RED_SEAGRASS.get());
                         output.accept(ModBlocks.TALL_RED_SEAGRASS.get());
-                        output.accept(ModBlocks.TALL_RED_SEAGRASS.get());
+                        output.accept(ModBlocks.WHITE_SAND.get());
 
                     }).build());
 

@@ -34,7 +34,7 @@
       "upper_size": 2
     },
     "trunk_placer": {
-      "type": "minecraft:straight_trunk_placer",
+      "type": "expandedoceans:mod_straight_trunk_placer",
       "base_height": 3,
       "height_rand_a": 3,
       "height_rand_b": 2
