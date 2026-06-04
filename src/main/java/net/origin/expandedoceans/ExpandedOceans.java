@@ -16,6 +16,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.origin.expandedoceans.block.ModBlocks;
 import net.origin.expandedoceans.item.ModCreativeModeTabs;
 import net.origin.expandedoceans.item.ModItems;
+import net.origin.expandedoceans.worldgen.EOLithostiched;
 import net.origin.expandedoceans.worldgen.custom_features.ModFeatures;
 import net.origin.expandedoceans.worldgen.tree.trunk.ModTrunkPlacers;
 import org.slf4j.Logger;
@@ -51,7 +52,7 @@ public class ExpandedOceans {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-
+        event.enqueueWork(()->{EOLithostiched.init();});
     }
 
     // Add the example block item to the building blocks tab

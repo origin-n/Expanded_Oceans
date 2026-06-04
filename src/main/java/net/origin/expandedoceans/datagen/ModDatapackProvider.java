@@ -1,5 +1,6 @@
 package net.origin.expandedoceans.datagen;
 
+import dev.worldgen.lithostitched.api.registry.LithostitchedRegistries;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -7,9 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.origin.expandedoceans.ExpandedOceans;
-import net.origin.expandedoceans.worldgen.ModBiomeModifiers;
-import net.origin.expandedoceans.worldgen.ModConfiguredFeatures;
-import net.origin.expandedoceans.worldgen.ModPlacedFeatures;
+import net.origin.expandedoceans.worldgen.*;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
@@ -19,6 +18,8 @@ public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
 
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
+            .add(Registries.BIOME, ModBiomes::bootstrap)
+            .add(LithostitchedRegistries.WORLDGEN_MODIFIER, EOWorldgenModifiers::bootstrap)
             .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
             ;
 

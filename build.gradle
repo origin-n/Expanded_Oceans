@@ -29,6 +29,9 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
+    maven {
+        url = "https://api.modrinth.com/maven"
+    }
 }
 
 base {
@@ -136,6 +139,10 @@ dependencies {
         compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
         // at runtime, use the full JEI jar for NeoForge
         runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+    }
+
+    dependencies {
+        implementation "maven.modrinth:lithostitched:${lithostiched_version}"
     }
 
 
