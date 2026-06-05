@@ -6,16 +6,16 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.origin.expandedoceans.ExpandedOceans;
-import net.origin.expandedoceans.worldgen.custom_features.configuration.ModSeagrassConfiguration;
+import net.origin.expandedoceans.worldgen.custom_features.configuration.EOSeagrassConfiguration;
 
-public class ModFeatures {
+public class EOFeatures {
 
     public static final DeferredRegister<Feature<?>> FEATURES =
             DeferredRegister.create(Registries.FEATURE, ExpandedOceans.MOD_ID);
 
-    public static final DeferredHolder<Feature<?>, ModSeagrassFeature> MOD_SEAGRASS_FEATURE =
-            FEATURES.register("mod_seagrass", ()-> new ModSeagrassFeature(
-                    ModSeagrassConfiguration.CODEC
+    public static final DeferredHolder<Feature<?>, EOSeagrassFeature> MOD_SEAGRASS_FEATURE =
+            FEATURES.register("mod_seagrass", ()-> new EOSeagrassFeature(
+                    EOSeagrassConfiguration.CODEC
             ));
 
     public static void register(IEventBus eventBus){

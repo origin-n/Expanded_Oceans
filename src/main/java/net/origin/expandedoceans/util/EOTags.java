@@ -8,7 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.origin.expandedoceans.ExpandedOceans;
 
-public class ModTags {
+public class EOTags {
     public static class Blocks {
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(ExpandedOceans.MOD_ID, name));

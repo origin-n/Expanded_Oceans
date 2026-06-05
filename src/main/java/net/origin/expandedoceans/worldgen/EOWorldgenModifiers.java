@@ -14,7 +14,7 @@ public class EOWorldgenModifiers {
 
     public static void bootstrap(BootstrapContext<WorldgenModifier> context){
         context.register(SURFACE_RULES, WorldgenModifier.builder().addSurfaceRule(
-                Level.OVERWORLD, InjectionType.PREPEND, ModSurfaceRuleData.makeRules()
+                Level.OVERWORLD, InjectionType.PREPEND, EOSurfaceRuleData.makeRules()
         ));
     }
 

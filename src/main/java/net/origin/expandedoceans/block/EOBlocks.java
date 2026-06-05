@@ -10,22 +10,22 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.origin.expandedoceans.ExpandedOceans;
-import net.origin.expandedoceans.block.custom.ModLogBlock;
-import net.origin.expandedoceans.block.custom.ModSeagrassBlock;
-import net.origin.expandedoceans.block.custom.ModWaterloggableSaplingBlock;
-import net.origin.expandedoceans.block.custom.ModWhiteSand;
-import net.origin.expandedoceans.item.ModItems;
-import net.origin.expandedoceans.worldgen.tree.ModTreeGrowers;
+import net.origin.expandedoceans.block.custom.EOLogBlock;
+import net.origin.expandedoceans.block.custom.EOSeagrassBlock;
+import net.origin.expandedoceans.block.custom.EOWaterloggableSaplingBlock;
+import net.origin.expandedoceans.block.custom.EOWhiteSand;
+import net.origin.expandedoceans.item.EOItems;
+import net.origin.expandedoceans.worldgen.tree.EOTreeGrowers;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public class ModBlocks {
+public class EOBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(ExpandedOceans.MOD_ID);
 
     public static final DeferredBlock<Block> WHITE_SAND = registerBlock("white_sand",
-            ()-> new ModWhiteSand(BlockBehaviour.Properties.ofFullCopy(Blocks.SAND)));
+            ()-> new EOWhiteSand(BlockBehaviour.Properties.ofFullCopy(Blocks.SAND)));
     public static final DeferredBlock<Block> WHITE_SANDSTONE = registerBlock("white_sandstone",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> SMOOTH_WHITE_SANDSTONE = registerBlock("smooth_white_sandstone",
@@ -35,13 +35,13 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CHISELED_WHITE_SANDSTONE = registerBlock("chiseled_white_sandstone",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<StairBlock> WHITE_SANDSTONE_STAIRS = registerBlock("white_sandstone_stairs",
-            ()-> new StairBlock(ModBlocks.WHITE_SANDSTONE.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE_STAIRS)));
+            ()-> new StairBlock(EOBlocks.WHITE_SANDSTONE.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE_STAIRS)));
     public static final DeferredBlock<SlabBlock> WHITE_SANDSTONE_SLAB = registerBlock("white_sandstone_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<WallBlock> WHITE_SANDSTONE_WALL = registerBlock("white_sandstone_wall",
             ()-> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<StairBlock> SMOOTH_WHITE_SANDSTONE_STAIRS = registerBlock("smooth_white_sandstone_stairs",
-            ()-> new StairBlock(ModBlocks.WHITE_SANDSTONE.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE_STAIRS)));
+            ()-> new StairBlock(EOBlocks.WHITE_SANDSTONE.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE_STAIRS)));
     public static final DeferredBlock<SlabBlock> SMOOTH_WHITE_SANDSTONE_SLAB = registerBlock("smooth_white_sandstone_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<SlabBlock> CUT_WHITE_SANDSTONE_SLAB = registerBlock("cut_white_sandstone_slab",
@@ -51,7 +51,7 @@ public class ModBlocks {
     public static final Map<Block, Block> BONEMEAL_RESULT = new HashMap<>();
 
     public static final DeferredBlock<Block> RED_SEAGRASS = registerBlock("red_seagrass",
-            ()-> new ModSeagrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion()));
+            ()-> new EOSeagrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SEAGRASS).noOcclusion()));
     public static final DeferredBlock<TallSeagrassBlock> TALL_RED_SEAGRASS = registerBlock("tall_red_seagrass",
             ()-> new TallSeagrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_SEAGRASS).noOcclusion()));
 
@@ -60,13 +60,13 @@ public class ModBlocks {
     public static final Map<Block, Block> STRIPPABLES = new HashMap<>();
     //Ocean Willow
     public static final DeferredBlock<Block> OCEAN_WILLOW_LOG = registerBlock("ocean_willow_log",
-            ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STEM)));
+            ()-> new EOLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STEM)));
     public static final DeferredBlock<Block> OCEAN_WILLOW_WOOD = registerBlock("ocean_willow_wood",
-            ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_HYPHAE)));
+            ()-> new EOLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_HYPHAE)));
     public static final DeferredBlock<Block> STRIPPED_OCEAN_WILLOW_LOG = registerBlock("stripped_ocean_willow_log",
-            ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_WARPED_STEM)));
+            ()-> new EOLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_WARPED_STEM)));
     public static final DeferredBlock<Block> STRIPPED_OCEAN_WILLOW_WOOD = registerBlock("stripped_ocean_willow_wood",
-            ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_WARPED_HYPHAE)));
+            ()-> new EOLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_WARPED_HYPHAE)));
 
     public static final DeferredBlock<Block> OCEAN_WILLOW_PLANKS = registerBlock("ocean_willow_planks",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
@@ -74,10 +74,10 @@ public class ModBlocks {
             ()-> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LEAVES)));
 
     public static final DeferredBlock<Block> OCEAN_WILLOW_SAPLING = registerBlock("ocean_willow_sapling",
-            ()-> new ModWaterloggableSaplingBlock(ModTreeGrowers.OCEAN_WILLOW, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
+            ()-> new EOWaterloggableSaplingBlock(EOTreeGrowers.OCEAN_WILLOW, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
 
     public static final DeferredBlock<StairBlock> OCEAN_WILLOW_STAIRS = registerBlock("ocean_willow_stairs",
-            ()-> new StairBlock(ModBlocks.OCEAN_WILLOW_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STAIRS)));
+            ()-> new StairBlock(EOBlocks.OCEAN_WILLOW_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STAIRS)));
     public static final DeferredBlock<SlabBlock> OCEAN_WILLOW_SLAB = registerBlock("ocean_willow_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_SLAB)));
 
@@ -98,13 +98,13 @@ public class ModBlocks {
 
     //Water Maple
     public static final DeferredBlock<Block> WATER_MAPLE_LOG = registerBlock("water_maple_log",
-            ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STEM)));
+            ()-> new EOLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STEM)));
     public static final DeferredBlock<Block> WATER_MAPLE_WOOD = registerBlock("water_maple_wood",
-            ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_HYPHAE)));
+            ()-> new EOLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_HYPHAE)));
     public static final DeferredBlock<Block> STRIPPED_WATER_MAPLE_LOG = registerBlock("stripped_water_maple_log",
-            ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_WARPED_STEM)));
+            ()-> new EOLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_WARPED_STEM)));
     public static final DeferredBlock<Block> STRIPPED_WATER_MAPLE_WOOD = registerBlock("stripped_water_maple_wood",
-            ()-> new ModLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_WARPED_HYPHAE)));
+            ()-> new EOLogBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_WARPED_HYPHAE)));
 
     public static final DeferredBlock<Block> WATER_MAPLE_PLANKS = registerBlock("water_maple_planks",
             ()-> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
@@ -112,10 +112,10 @@ public class ModBlocks {
             ()-> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LEAVES)));
 
     public static final DeferredBlock<Block> WATER_MAPLE_SAPLING = registerBlock("water_maple_sapling",
-            ()-> new ModWaterloggableSaplingBlock(ModTreeGrowers.WATER_MAPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
+            ()-> new EOWaterloggableSaplingBlock(EOTreeGrowers.WATER_MAPLE, BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_SAPLING)));
 
     public static final DeferredBlock<StairBlock> WATER_MAPLE_STAIRS = registerBlock("water_maple_stairs",
-            ()-> new StairBlock(ModBlocks.WATER_MAPLE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STAIRS)));
+            ()-> new StairBlock(EOBlocks.WATER_MAPLE_PLANKS.get().defaultBlockState(),BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_STAIRS)));
     public static final DeferredBlock<SlabBlock> WATER_MAPLE_SLAB = registerBlock("water_maple_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_SLAB)));
 
@@ -150,12 +150,12 @@ public class ModBlocks {
     }
 
     private static  <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        EOItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
-        eventBus.addListener(ModBlocks::onBlocksRegistered);
+        eventBus.addListener(EOBlocks::onBlocksRegistered);
     }
 
     private static void onBlocksRegistered(net.neoforged.neoforge.registries.RegisterEvent event) {

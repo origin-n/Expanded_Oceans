@@ -13,10 +13,10 @@ import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.material.Fluids;
-import net.origin.expandedoceans.worldgen.ModPlacedFeatures;
+import net.origin.expandedoceans.worldgen.EOPlacedFeatures;
 
-public class ModWhiteSand extends FallingBlock implements BonemealableBlock {
-    public ModWhiteSand(Properties properties) {
+public class EOWhiteSand extends FallingBlock implements BonemealableBlock {
+    public EOWhiteSand(Properties properties) {
         super(properties);
     }
 
@@ -39,7 +39,7 @@ public class ModWhiteSand extends FallingBlock implements BonemealableBlock {
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
         Holder<PlacedFeature> feature = level.registryAccess()
                 .registryOrThrow(Registries.PLACED_FEATURE)
-                .getHolderOrThrow(ModPlacedFeatures.RED_SEAGRASS_PATCH_BONEMEAL_KEY);
+                .getHolderOrThrow(EOPlacedFeatures.RED_SEAGRASS_PATCH_BONEMEAL_KEY);
 
         if (level.getBlockState(pos.above()).getFluidState().is(Fluids.WATER)) {
             feature.value().place(level, level.getChunkSource().getGenerator(), random, pos.above());
@@ -51,7 +51,7 @@ public class ModWhiteSand extends FallingBlock implements BonemealableBlock {
 //    @Override
 //    public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
 //        if (level.getFluidState(pos.above()).is(Fluids.WATER) && level.getBlockState(pos.above()).getBlock() == Blocks.WATER) {
-//            level.setBlock(pos.above(), ModBlocks.RED_SEAGRASS.get().defaultBlockState(), 3);
+//            level.setBlock(pos.above(), EOBlocks.RED_SEAGRASS.get().defaultBlockState(), 3);
 //        }
 //    }
 

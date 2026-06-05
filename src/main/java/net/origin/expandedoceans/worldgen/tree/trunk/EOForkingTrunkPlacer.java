@@ -17,18 +17,18 @@ import java.util.List;
 import java.util.OptionalInt;
 import java.util.function.BiConsumer;
 
-public class ModForkingTrunkPlacer extends TrunkPlacer {
-    public static final MapCodec<ModForkingTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(
-            p_70161_ -> trunkPlacerParts(p_70161_).apply(p_70161_, ModForkingTrunkPlacer::new)
+public class EOForkingTrunkPlacer extends TrunkPlacer {
+    public static final MapCodec<EOForkingTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(
+            p_70161_ -> trunkPlacerParts(p_70161_).apply(p_70161_, EOForkingTrunkPlacer::new)
     );
 
-    public ModForkingTrunkPlacer(int baseHeight, int heightRandA, int heightRandB) {
+    public EOForkingTrunkPlacer(int baseHeight, int heightRandA, int heightRandB) {
         super(baseHeight, heightRandA, heightRandB);
     }
 
     @Override
     protected TrunkPlacerType<?> type() {
-        return ModTrunkPlacers.MOD_FORKING_TRUNK_PLACER.get();
+        return EOTrunkPlacers.MOD_FORKING_TRUNK_PLACER.get();
     }
 
     @Override

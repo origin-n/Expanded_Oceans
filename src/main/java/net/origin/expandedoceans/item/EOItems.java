@@ -4,7 +4,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.origin.expandedoceans.ExpandedOceans;
 
-public class ModItems {
+public class EOItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ExpandedOceans.MOD_ID);
 
 

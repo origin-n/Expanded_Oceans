@@ -15,18 +15,18 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 import java.util.List;
 import java.util.function.BiConsumer;
 
-public class ModStraightTrunkPlacer extends TrunkPlacer {
-    public static final MapCodec<ModStraightTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(
-            p_70261_ -> trunkPlacerParts(p_70261_).apply(p_70261_, ModStraightTrunkPlacer::new)
+public class EOStraightTrunkPlacer extends TrunkPlacer {
+    public static final MapCodec<EOStraightTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(
+            p_70261_ -> trunkPlacerParts(p_70261_).apply(p_70261_, EOStraightTrunkPlacer::new)
     );
 
-    public ModStraightTrunkPlacer(int baseHeight, int heightRandA, int heightRandB) {
+    public EOStraightTrunkPlacer(int baseHeight, int heightRandA, int heightRandB) {
         super(baseHeight, heightRandA, heightRandB);
     }
 
     @Override
     protected TrunkPlacerType<?> type() {
-        return ModTrunkPlacers.MOD_STRAIGHT_TRUNK_PLACER.get();
+        return EOTrunkPlacers.MOD_STRAIGHT_TRUNK_PLACER.get();
     }
 
     @Override

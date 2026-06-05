@@ -13,18 +13,18 @@ import net.origin.expandedoceans.worldgen.*;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
+public class EODatapackProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
 
-            .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
-            .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
-            .add(Registries.BIOME, ModBiomes::bootstrap)
+            .add(Registries.CONFIGURED_FEATURE, EOConfiguredFeatures::bootstrap)
+            .add(Registries.PLACED_FEATURE, EOPlacedFeatures::bootstrap)
+            .add(Registries.BIOME, EOBiomes::bootstrap)
             .add(LithostitchedRegistries.WORLDGEN_MODIFIER, EOWorldgenModifiers::bootstrap)
-            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
+            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, EOBiomeModifiers::bootstrap)
             ;
 
 
-    public ModDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+    public EODatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(ExpandedOceans.MOD_ID));
     }
 }

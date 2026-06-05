@@ -6,13 +6,12 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.origin.expandedoceans.ExpandedOceans;
 
-public class ModBiomes {
+public class EOBiomes {
     public static final ResourceKey<Biome> RED_GRASSY_PLATEAUS = registerKey("red_grassy_plateaus");
 
     public static void bootstrap(BootstrapContext<Biome> context) {
@@ -34,9 +33,9 @@ public class ModBiomes {
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder(placedFeatures, context.lookup(Registries.CONFIGURED_CARVER));
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-                placedFeatures.getOrThrow(ModPlacedFeatures.RED_SEAGRASS_PATCH_PLACED_KEY));
+                placedFeatures.getOrThrow(EOPlacedFeatures.RED_SEAGRASS_PATCH_PLACED_KEY));
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-                placedFeatures.getOrThrow(ModPlacedFeatures.SPARSE_RED_SEAGRASS_PATCH_PLACED_KEY));
+                placedFeatures.getOrThrow(EOPlacedFeatures.SPARSE_RED_SEAGRASS_PATCH_PLACED_KEY));
 
 
         return new Biome.BiomeBuilder()

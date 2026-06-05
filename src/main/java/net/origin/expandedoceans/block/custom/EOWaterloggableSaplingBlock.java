@@ -5,7 +5,6 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SaplingBlock;
@@ -18,12 +17,11 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
-import org.jetbrains.annotations.Nullable;
 
-public class ModWaterloggableSaplingBlock extends SaplingBlock implements SimpleWaterloggedBlock {
+public class EOWaterloggableSaplingBlock extends SaplingBlock implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    public ModWaterloggableSaplingBlock(TreeGrower grower, BlockBehaviour.Properties props) {
+    public EOWaterloggableSaplingBlock(TreeGrower grower, BlockBehaviour.Properties props) {
         super(grower, props);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, false).setValue(STAGE, 0));
     }

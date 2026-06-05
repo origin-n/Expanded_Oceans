@@ -12,11 +12,11 @@ import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.origin.expandedoceans.ExpandedOceans;
-import net.origin.expandedoceans.block.ModBlocks;
+import net.origin.expandedoceans.block.EOBlocks;
 
 import java.util.List;
 
-public class ModPlacedFeatures {
+public class EOPlacedFeatures {
     public static final ResourceKey<PlacedFeature> RED_SEAGRASS_PATCH_PLACED_KEY = registerKey("red_seagrass_patch");
     public static final ResourceKey<PlacedFeature> SPARSE_RED_SEAGRASS_PATCH_PLACED_KEY = registerKey("sparse_red_seagrass_patch");
     public static final ResourceKey<PlacedFeature> RED_SEAGRASS_PATCH_BONEMEAL_KEY = registerKey("red_seagrass_bonemeal");
@@ -45,7 +45,7 @@ public class ModPlacedFeatures {
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        Holder<ConfiguredFeature<?, ?>> redSeagrassPatch = configuredFeatures.getOrThrow(ModConfiguredFeatures.RED_SEAGRASS_PATCH_KEY);
+        Holder<ConfiguredFeature<?, ?>> redSeagrassPatch = configuredFeatures.getOrThrow(EOConfiguredFeatures.RED_SEAGRASS_PATCH_KEY);
 
         register(context, RED_SEAGRASS_PATCH_PLACED_KEY, redSeagrassPatch, List.of(
                 NoiseBasedCountPlacement.of(2, 80.0D, 0.25D),
@@ -53,15 +53,15 @@ public class ModPlacedFeatures {
                 PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
                 BiomeFilter.biome()));
         register(context, RED_SEAGRASS_PATCH_BONEMEAL_KEY, redSeagrassPatch, List.of());
-        register(context, SPARSE_RED_SEAGRASS_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SPARSE_RED_SEAGRASS_PATCH_KEY), List.of(
+        register(context, SPARSE_RED_SEAGRASS_PATCH_PLACED_KEY, configuredFeatures.getOrThrow(EOConfiguredFeatures.SPARSE_RED_SEAGRASS_PATCH_KEY), List.of(
                 NoiseBasedCountPlacement.of(2, 80.0D, 0.25D),
                 InSquarePlacement.spread(),
                 PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
                 BiomeFilter.biome()));
 
-        register(context, OCEAN_WILLOW_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OCEAN_WILLOW_KEY),
+        register(context, OCEAN_WILLOW_PLACED_KEY, configuredFeatures.getOrThrow(EOConfiguredFeatures.OCEAN_WILLOW_KEY),
                 oceanTreePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
-                        ModBlocks.OCEAN_WILLOW_SAPLING.get()));
+                        EOBlocks.OCEAN_WILLOW_SAPLING.get()));
     }
 
 

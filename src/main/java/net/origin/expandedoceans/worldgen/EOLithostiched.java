@@ -1,7 +1,6 @@
 package net.origin.expandedoceans.worldgen;
 
 import dev.worldgen.lithostitched.api.event.AddBiomeInjectorsEvent;
-import dev.worldgen.lithostitched.api.event.AddRegionsEvent;
 import dev.worldgen.lithostitched.api.worldgen.biomeinjector.BiomeInjector;
 import dev.worldgen.lithostitched.api.worldgen.biomeinjector.ParameterBuilder;
 import net.minecraft.core.registries.Registries;
@@ -19,7 +18,7 @@ public class EOLithostiched {
             consumer.accept(ResourceLocation.fromNamespaceAndPath(ExpandedOceans.MOD_ID, "red_grassy_plateaus"),
                     BiomeInjector.builder(Level.OVERWORLD).replacePartially(
                             biomeRegistry.getHolderOrThrow(Biomes.LUKEWARM_OCEAN),
-                            biomeRegistry.getHolderOrThrow(ModBiomes.RED_GRASSY_PLATEAUS
+                            biomeRegistry.getHolderOrThrow(EOBiomes.RED_GRASSY_PLATEAUS
                             ), ParameterBuilder.create()
                     ));
                 }

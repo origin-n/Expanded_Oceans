@@ -6,11 +6,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.common.ItemAbility;
-import net.origin.expandedoceans.block.ModBlocks;
+import net.origin.expandedoceans.block.EOBlocks;
 import org.jetbrains.annotations.Nullable;
 
-public class ModLogBlock extends RotatedPillarBlock {
-    public ModLogBlock(Properties properties) {
+public class EOLogBlock extends RotatedPillarBlock {
+    public EOLogBlock(Properties properties) {
         super(properties);
     }
 
@@ -19,8 +19,8 @@ public class ModLogBlock extends RotatedPillarBlock {
 
         if(context.getItemInHand().getItem() instanceof AxeItem){
             Block blockClicked = state.getBlock();
-            if(ModBlocks.STRIPPABLES.containsKey(blockClicked)){
-                Block strippedBlock = ModBlocks.STRIPPABLES.get(blockClicked);
+            if(EOBlocks.STRIPPABLES.containsKey(blockClicked)){
+                Block strippedBlock = EOBlocks.STRIPPABLES.get(blockClicked);
                 return strippedBlock.defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
         }

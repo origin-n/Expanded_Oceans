@@ -1,6 +1,5 @@
 package net.origin.expandedoceans.worldgen;
 
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
@@ -13,7 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
-public class ModBiomeModifiers {
+public class EOBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_RED_SEAGRASS_PATCH = registerKey("add_red_seagrass");
     public static final ResourceKey<BiomeModifier> ADD_OCEAN_WILLOW_TREE = registerKey("add_ocean_willow");
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
@@ -22,12 +21,12 @@ public class ModBiomeModifiers {
 
         context.register(ADD_RED_SEAGRASS_PATCH, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.DEEP_OCEAN)),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.RED_SEAGRASS_PATCH_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(EOPlacedFeatures.RED_SEAGRASS_PATCH_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_OCEAN_WILLOW_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.DEEP_OCEAN)),
-                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.OCEAN_WILLOW_PLACED_KEY)),
+                HolderSet.direct(placedFeatures.getOrThrow(EOPlacedFeatures.OCEAN_WILLOW_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
     }

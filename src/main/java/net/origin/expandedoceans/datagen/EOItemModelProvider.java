@@ -8,30 +8,30 @@ import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.origin.expandedoceans.ExpandedOceans;
-import net.origin.expandedoceans.block.ModBlocks;
+import net.origin.expandedoceans.block.EOBlocks;
 
-public class ModItemModelProvider extends ItemModelProvider {
-    public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+public class EOItemModelProvider extends ItemModelProvider {
+    public EOItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, ExpandedOceans.MOD_ID, existingFileHelper);
     }
 
     @Override
     protected void registerModels() {
-        saplingItem(ModBlocks.RED_SEAGRASS);
+        saplingItem(EOBlocks.RED_SEAGRASS);
 
-        saplingItem(ModBlocks.OCEAN_WILLOW_SAPLING);
+        saplingItem(EOBlocks.OCEAN_WILLOW_SAPLING);
 
-        buttonItem(ModBlocks.OCEAN_WILLOW_BUTTON, ModBlocks.OCEAN_WILLOW_PLANKS);
-        fenceItem(ModBlocks.OCEAN_WILLOW_FENCE, ModBlocks.OCEAN_WILLOW_PLANKS);
+        buttonItem(EOBlocks.OCEAN_WILLOW_BUTTON, EOBlocks.OCEAN_WILLOW_PLANKS);
+        fenceItem(EOBlocks.OCEAN_WILLOW_FENCE, EOBlocks.OCEAN_WILLOW_PLANKS);
 
-        basicItem(ModBlocks.OCEAN_WILLOW_DOOR.asItem());
+        basicItem(EOBlocks.OCEAN_WILLOW_DOOR.asItem());
 
-        saplingItem(ModBlocks.WATER_MAPLE_SAPLING);
+        saplingItem(EOBlocks.WATER_MAPLE_SAPLING);
 
-        buttonItem(ModBlocks.WATER_MAPLE_BUTTON, ModBlocks.WATER_MAPLE_PLANKS);
-        fenceItem(ModBlocks.WATER_MAPLE_FENCE, ModBlocks.WATER_MAPLE_PLANKS);
+        buttonItem(EOBlocks.WATER_MAPLE_BUTTON, EOBlocks.WATER_MAPLE_PLANKS);
+        fenceItem(EOBlocks.WATER_MAPLE_FENCE, EOBlocks.WATER_MAPLE_PLANKS);
 
-        basicItem(ModBlocks.WATER_MAPLE_DOOR.asItem());
+        basicItem(EOBlocks.WATER_MAPLE_DOOR.asItem());
 
     }
 

@@ -13,12 +13,12 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.origin.expandedoceans.block.ModBlocks;
-import net.origin.expandedoceans.item.ModCreativeModeTabs;
-import net.origin.expandedoceans.item.ModItems;
+import net.origin.expandedoceans.block.EOBlocks;
+import net.origin.expandedoceans.item.EOCreativeModeTabs;
+import net.origin.expandedoceans.item.EOItems;
 import net.origin.expandedoceans.worldgen.EOLithostiched;
-import net.origin.expandedoceans.worldgen.custom_features.ModFeatures;
-import net.origin.expandedoceans.worldgen.tree.trunk.ModTrunkPlacers;
+import net.origin.expandedoceans.worldgen.custom_features.EOFeatures;
+import net.origin.expandedoceans.worldgen.tree.trunk.EOTrunkPlacers;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -36,13 +36,13 @@ public class ExpandedOceans {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
+        EOItems.register(modEventBus);
+        EOBlocks.register(modEventBus);
 
-        ModCreativeModeTabs.register(modEventBus);
+        EOCreativeModeTabs.register(modEventBus);
 
-        ModTrunkPlacers.register(modEventBus);
-        ModFeatures.register(modEventBus);
+        EOTrunkPlacers.register(modEventBus);
+        EOFeatures.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

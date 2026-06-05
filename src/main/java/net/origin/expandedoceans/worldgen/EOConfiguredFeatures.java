@@ -14,13 +14,13 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlac
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.origin.expandedoceans.ExpandedOceans;
-import net.origin.expandedoceans.block.ModBlocks;
-import net.origin.expandedoceans.worldgen.custom_features.ModFeatures;
-import net.origin.expandedoceans.worldgen.custom_features.configuration.ModSeagrassConfiguration;
-import net.origin.expandedoceans.worldgen.tree.trunk.ModForkingTrunkPlacer;
-import net.origin.expandedoceans.worldgen.tree.trunk.ModStraightTrunkPlacer;
+import net.origin.expandedoceans.block.EOBlocks;
+import net.origin.expandedoceans.worldgen.custom_features.EOFeatures;
+import net.origin.expandedoceans.worldgen.custom_features.configuration.EOSeagrassConfiguration;
+import net.origin.expandedoceans.worldgen.tree.trunk.EOForkingTrunkPlacer;
+import net.origin.expandedoceans.worldgen.tree.trunk.EOStraightTrunkPlacer;
 
-public class ModConfiguredFeatures {
+public class EOConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OCEAN_WILLOW_KEY = registerKey("ocean_willow");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WATER_MAPLE_KEY = registerKey("water_maple");
     public static final ResourceKey<ConfiguredFeature<?, ?>> RED_SEAGRASS_PATCH_KEY = registerKey("red_seagrass_patch");
@@ -29,32 +29,32 @@ public class ModConfiguredFeatures {
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
         register(context, OCEAN_WILLOW_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.OCEAN_WILLOW_LOG.get()),
-                new ModStraightTrunkPlacer(3, 3, 2),
+                BlockStateProvider.simple(EOBlocks.OCEAN_WILLOW_LOG.get()),
+                new EOStraightTrunkPlacer(3, 3, 2),
 
-                BlockStateProvider.simple(ModBlocks.OCEAN_WILLOW_LEAVES.get()),
+                BlockStateProvider.simple(EOBlocks.OCEAN_WILLOW_LEAVES.get()),
                 new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, WATER_MAPLE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
-                BlockStateProvider.simple(ModBlocks.WATER_MAPLE_LOG.get()),
-                new ModForkingTrunkPlacer(2, 2, 1),
+                BlockStateProvider.simple(EOBlocks.WATER_MAPLE_LOG.get()),
+                new EOForkingTrunkPlacer(2, 2, 1),
 
-                BlockStateProvider.simple(ModBlocks.WATER_MAPLE_LEAVES.get()),
+                BlockStateProvider.simple(EOBlocks.WATER_MAPLE_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
-        register(context, RED_SEAGRASS_PATCH_KEY, ModFeatures.MOD_SEAGRASS_FEATURE.get(), new ModSeagrassConfiguration(
+        register(context, RED_SEAGRASS_PATCH_KEY, EOFeatures.MOD_SEAGRASS_FEATURE.get(), new EOSeagrassConfiguration(
                 0.3f, 4, 40,
-                BlockStateProvider.simple(ModBlocks.RED_SEAGRASS.get()),
-                BlockStateProvider.simple(ModBlocks.TALL_RED_SEAGRASS.get())));
+                BlockStateProvider.simple(EOBlocks.RED_SEAGRASS.get()),
+                BlockStateProvider.simple(EOBlocks.TALL_RED_SEAGRASS.get())));
 
-        register(context, SPARSE_RED_SEAGRASS_PATCH_KEY, ModFeatures.MOD_SEAGRASS_FEATURE.get(), new ModSeagrassConfiguration(
+        register(context, SPARSE_RED_SEAGRASS_PATCH_KEY, EOFeatures.MOD_SEAGRASS_FEATURE.get(), new EOSeagrassConfiguration(
                 0.3f, 4, 10,
-                BlockStateProvider.simple(ModBlocks.RED_SEAGRASS.get()),
-                BlockStateProvider.simple(ModBlocks.TALL_RED_SEAGRASS.get())));
+                BlockStateProvider.simple(EOBlocks.RED_SEAGRASS.get()),
+                BlockStateProvider.simple(EOBlocks.TALL_RED_SEAGRASS.get())));
 
 
     }

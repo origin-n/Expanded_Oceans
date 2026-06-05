@@ -11,21 +11,21 @@ import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.origin.expandedoceans.worldgen.custom_features.configuration.ModSeagrassConfiguration;
+import net.origin.expandedoceans.worldgen.custom_features.configuration.EOSeagrassConfiguration;
 
-public class ModSeagrassFeature extends Feature<ModSeagrassConfiguration> {
-    public ModSeagrassFeature(Codec<ModSeagrassConfiguration> p_66768_) {
+public class EOSeagrassFeature extends Feature<EOSeagrassConfiguration> {
+    public EOSeagrassFeature(Codec<EOSeagrassConfiguration> p_66768_) {
         super(p_66768_);
     }
 
     @Override
-    public boolean place(FeaturePlaceContext<ModSeagrassConfiguration> context) {
+    public boolean place(FeaturePlaceContext<EOSeagrassConfiguration> context) {
         boolean placedAny = false;
 
         RandomSource random = context.random();
         WorldGenLevel level = context.level();
         BlockPos origin = context.origin();
-        ModSeagrassConfiguration config = context.config();
+        EOSeagrassConfiguration config = context.config();
 
         for (int attempt = 0; attempt < config.patchAttempts(); attempt++) {
 
@@ -93,7 +93,7 @@ public class ModSeagrassFeature extends Feature<ModSeagrassConfiguration> {
 //        RandomSource randomsource = p_160318_.random();
 //        WorldGenLevel worldgenlevel = p_160318_.level();
 //        BlockPos blockpos = p_160318_.origin();
-//        ModSeagrassConfiguration seagrassfeatureconfiguration = p_160318_.config();
+//        EOSeagrassConfiguration seagrassfeatureconfiguration = p_160318_.config();
 ////        int i = randomsource.nextInt(8) - randomsource.nextInt(8);
 ////        int j = randomsource.nextInt(8) - randomsource.nextInt(8);
 ////        int k = worldgenlevel.getHeight(Heightmap.Types.OCEAN_FLOOR, blockpos.getX() + i, blockpos.getZ() + j);
