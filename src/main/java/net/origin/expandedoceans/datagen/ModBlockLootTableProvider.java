@@ -33,9 +33,19 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.WHITE_SAND.get());
+        this.dropSelf(ModBlocks.WHITE_SANDSTONE.get());
+        this.dropSelf(ModBlocks.CUT_WHITE_SANDSTONE.get());
+        this.dropSelf(ModBlocks.CHISELED_WHITE_SANDSTONE.get());
+        this.dropSelf(ModBlocks.SMOOTH_WHITE_SANDSTONE.get());
+        this.dropSelf(ModBlocks.WHITE_SANDSTONE_SLAB.get());
+        this.dropSelf(ModBlocks.WHITE_SANDSTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.WHITE_SANDSTONE_WALL.get());
+        this.dropSelf(ModBlocks.SMOOTH_WHITE_SANDSTONE_SLAB.get());
+        this.dropSelf(ModBlocks.SMOOTH_WHITE_SANDSTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.CUT_WHITE_SANDSTONE_SLAB.get());
+
         this.add(ModBlocks.RED_SEAGRASS.get(), BlockLootSubProvider::createShearsOnlyDrop);
         this.add(ModBlocks.TALL_RED_SEAGRASS.get(), this.createDoublePlantShearsDrop(ModBlocks.TALL_RED_SEAGRASS.get()));
-
 
         this.dropSelf(ModBlocks.OCEAN_WILLOW_LOG.get());
         this.dropSelf(ModBlocks.OCEAN_WILLOW_WOOD.get());

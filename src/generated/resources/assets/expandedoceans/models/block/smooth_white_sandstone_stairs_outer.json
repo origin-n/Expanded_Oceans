@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "expandedoceans:block/white_sandstone_top",
+    "side": "expandedoceans:block/white_sandstone_top",
+    "top": "expandedoceans:block/white_sandstone_top"
+  }
+}

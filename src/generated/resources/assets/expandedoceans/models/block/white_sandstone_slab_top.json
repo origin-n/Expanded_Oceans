@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "expandedoceans:block/white_sandstone_top",
+    "side": "expandedoceans:block/white_sandstone",
+    "top": "expandedoceans:block/white_sandstone_top"
+  }
+}

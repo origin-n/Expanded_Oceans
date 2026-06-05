@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "expandedoceans:block/white_sandstone_slab"
+    },
+    "type=double": {
+      "model": "expandedoceans:block/white_sandstone"
+    },
+    "type=top": {
+      "model": "expandedoceans:block/white_sandstone_slab_top"
+    }
+  }
+}

@@ -56,6 +56,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RED_SEAGRASS.get());
                         output.accept(ModBlocks.TALL_RED_SEAGRASS.get());
                         output.accept(ModBlocks.WHITE_SAND.get());
+                        output.accept(ModBlocks.WHITE_SANDSTONE.get());
+                        output.accept(ModBlocks.CUT_WHITE_SANDSTONE.get());
+                        output.accept(ModBlocks.CHISELED_WHITE_SANDSTONE.get());
+                        output.accept(ModBlocks.SMOOTH_WHITE_SANDSTONE.get());
+                        output.accept(ModBlocks.WHITE_SANDSTONE_SLAB.get());
+                        output.accept(ModBlocks.SMOOTH_WHITE_SANDSTONE_SLAB.get());
+                        output.accept(ModBlocks.CUT_WHITE_SANDSTONE_SLAB.get());
+                        output.accept(ModBlocks.WHITE_SANDSTONE_STAIRS.get());
+                        output.accept(ModBlocks.SMOOTH_WHITE_SANDSTONE_STAIRS.get());
+                        output.accept(ModBlocks.WHITE_SANDSTONE_WALL.get());
 
                     }).build());
 

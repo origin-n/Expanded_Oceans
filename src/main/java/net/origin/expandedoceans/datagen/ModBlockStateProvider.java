@@ -25,9 +25,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.WHITE_SAND);
+        cubeBottomTop(ModBlocks.WHITE_SANDSTONE);
+        cubeBottomTop(ModBlocks.CUT_WHITE_SANDSTONE, ModBlocks.CUT_WHITE_SANDSTONE.getId().getPath(), ModBlocks.WHITE_SANDSTONE.getId().getPath() + "_top", ModBlocks.WHITE_SANDSTONE.getId().getPath() + "_top");
+        cubeBottomTop(ModBlocks.CHISELED_WHITE_SANDSTONE, ModBlocks.CHISELED_WHITE_SANDSTONE.getId().getPath(), ModBlocks.WHITE_SANDSTONE.getId().getPath() + "_top", ModBlocks.WHITE_SANDSTONE.getId().getPath() + "_top");
+        blockWithItem(ModBlocks.SMOOTH_WHITE_SANDSTONE, "white_sandstone_top");
+        slabBlock(ModBlocks.WHITE_SANDSTONE_SLAB.get(), blockTexture(ModBlocks.WHITE_SANDSTONE.get()), blockTexture(ModBlocks.WHITE_SANDSTONE.get()), modLoc("block/white_sandstone_top"), modLoc("block/white_sandstone_top"));
+        slabBlock(ModBlocks.SMOOTH_WHITE_SANDSTONE_SLAB.get(), blockTexture(ModBlocks.SMOOTH_WHITE_SANDSTONE.get()), modLoc("block/white_sandstone_top"), modLoc("block/white_sandstone_top"), modLoc("block/white_sandstone_top"));
+        slabBlock(ModBlocks.CUT_WHITE_SANDSTONE_SLAB.get(), blockTexture(ModBlocks.CUT_WHITE_SANDSTONE.get()), blockTexture(ModBlocks.CUT_WHITE_SANDSTONE.get()), modLoc("block/white_sandstone_top"), modLoc("block/white_sandstone_top"));
+        stairsBlock(ModBlocks.WHITE_SANDSTONE_STAIRS.get(), blockTexture(ModBlocks.WHITE_SANDSTONE.get()), modLoc("block/white_sandstone_bottom"), modLoc("block/white_sandstone_top"));
+        stairsBlock(ModBlocks.SMOOTH_WHITE_SANDSTONE_STAIRS.get(), modLoc("block/white_sandstone_top"), modLoc("block/white_sandstone_top"), modLoc("block/white_sandstone_top"));
+        wallBlock(ModBlocks.WHITE_SANDSTONE_WALL.get(), blockTexture(ModBlocks.WHITE_SANDSTONE.get()));
+
+        blockItem(ModBlocks.WHITE_SANDSTONE_SLAB);
+        blockItem(ModBlocks.SMOOTH_WHITE_SANDSTONE_SLAB);
+        blockItem(ModBlocks.CUT_WHITE_SANDSTONE_SLAB);
+        blockItem(ModBlocks.WHITE_SANDSTONE_STAIRS);
+        blockItem(ModBlocks.SMOOTH_WHITE_SANDSTONE_STAIRS);
+        blockItem(ModBlocks.WHITE_SANDSTONE_WALL);
+
         saplingBlock(ModBlocks.RED_SEAGRASS);
         tallSeagrassBlock(ModBlocks.TALL_RED_SEAGRASS);
-
 
         logBlock(((RotatedPillarBlock) ModBlocks.OCEAN_WILLOW_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.OCEAN_WILLOW_WOOD.get()), blockTexture(ModBlocks.OCEAN_WILLOW_LOG.get()), blockTexture(ModBlocks.OCEAN_WILLOW_LOG.get()));
@@ -59,7 +76,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.OCEAN_WILLOW_PRESSURE_PLATE);
         blockItem(ModBlocks.OCEAN_WILLOW_FENCE_GATE);
         blockItem(ModBlocks.OCEAN_WILLOW_TRAPDOOR, "_bottom");
-
 
         logBlock(((RotatedPillarBlock) ModBlocks.WATER_MAPLE_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.WATER_MAPLE_WOOD.get()), blockTexture(ModBlocks.WATER_MAPLE_LOG.get()), blockTexture(ModBlocks.WATER_MAPLE_LOG.get()));
@@ -119,11 +135,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
 
+    private void blockWithItem(DeferredBlock<?> deferredBlock, String name) {
+        simpleBlockWithItem(deferredBlock.get(), models().cubeAll(deferredBlock.getId().getPath(), modLoc("block/" + name)));
+    }
+
     private void blockItem(DeferredBlock<?> deferredBlock) {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("expandedoceans:block/" + deferredBlock.getId().getPath()));
     }
 
     private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("expandedoceans:block/" + deferredBlock.getId().getPath() + appendix));
+    }
+
+    private void cubeBottomTop(DeferredBlock<?> deferredBlock) {
+        simpleBlockWithItem(deferredBlock.get(), models().cubeBottomTop(deferredBlock.getId().getPath(), modLoc("block/" + deferredBlock.getId().getPath()),
+                modLoc("block/" + deferredBlock.getId().getPath() + "_bottom"), modLoc("block/" + deferredBlock.getId().getPath() + "_top")));
+    }
+    private void cubeBottomTop(DeferredBlock<?> deferredBlock, String side, String bottom, String top) {
+        simpleBlockWithItem(deferredBlock.get(), models().cubeBottomTop(deferredBlock.getId().getPath(), modLoc("block/" + side),
+                modLoc("block/" + bottom), modLoc("block/" + top)));
     }
 }

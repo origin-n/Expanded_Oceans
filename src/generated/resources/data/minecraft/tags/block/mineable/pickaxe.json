@@ -1,3 +1,14 @@
 {
-  "values": []
+  "values": [
+    "expandedoceans:white_sandstone",
+    "expandedoceans:cut_white_sandstone",
+    "expandedoceans:chiseled_white_sandstone",
+    "expandedoceans:smooth_white_sandstone",
+    "expandedoceans:white_sandstone_slab",
+    "expandedoceans:smooth_white_sandstone_slab",
+    "expandedoceans:cut_white_sandstone_slab",
+    "expandedoceans:white_sandstone_stairs",
+    "expandedoceans:smooth_white_sandstone_stairs",
+    "expandedoceans:white_sandstone_wall"
+  ]
 }

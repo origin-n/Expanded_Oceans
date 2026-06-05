@@ -20,7 +20,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-
+                .add(ModBlocks.WHITE_SANDSTONE.get())
+                .add(ModBlocks.CUT_WHITE_SANDSTONE.get())
+                .add(ModBlocks.CHISELED_WHITE_SANDSTONE.get())
+                .add(ModBlocks.SMOOTH_WHITE_SANDSTONE.get())
+                .add(ModBlocks.WHITE_SANDSTONE_SLAB.get())
+                .add(ModBlocks.SMOOTH_WHITE_SANDSTONE_SLAB.get())
+                .add(ModBlocks.CUT_WHITE_SANDSTONE_SLAB.get())
+                .add(ModBlocks.WHITE_SANDSTONE_STAIRS.get())
+                .add(ModBlocks.SMOOTH_WHITE_SANDSTONE_STAIRS.get())
+                .add(ModBlocks.WHITE_SANDSTONE_WALL.get())
         ;
 
         tag(BlockTags.NEEDS_STONE_TOOL)
