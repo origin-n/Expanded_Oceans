@@ -1,11 +1,9 @@
 {
-  "feature": "expandedoceans:red_seagrass_patch",
+  "feature": "expandedoceans:white_sandstone_hourglass_pillar",
   "placement": [
     {
-      "type": "minecraft:noise_based_count",
-      "noise_factor": 80.0,
-      "noise_offset": 0.25,
-      "noise_to_count_ratio": 4
+      "type": "minecraft:count",
+      "count": 1
     },
     {
       "type": "minecraft:in_square"

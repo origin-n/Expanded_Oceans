@@ -1,9 +1,10 @@
-package net.origin.expandedoceans.worldgen;
+package net.origin.expandedoceans.worldgen.biomes;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.origin.expandedoceans.block.EOBlocks;
+import net.origin.expandedoceans.worldgen.biomes.EOBiomes;
 
 public class EOSurfaceRuleData {
     private static final SurfaceRules.RuleSource DIRT = makeStateRule(Blocks.DIRT);

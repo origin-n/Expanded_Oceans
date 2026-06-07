@@ -23,6 +23,8 @@ public class EOPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> OCEAN_WILLOW_PLACED_KEY = registerKey("ocean_willow_placed");
 
+    public static final ResourceKey<PlacedFeature> WHITE_SANDSTONE_HOURGLASS_PILLAR_KEY = registerKey("white_sandstone_hourglass_pillar");
+
     public static List<PlacementModifier> oceanTreePlacement(
             PlacementModifier count,
             Block sapling) {
@@ -48,7 +50,7 @@ public class EOPlacedFeatures {
         Holder<ConfiguredFeature<?, ?>> redSeagrassPatch = configuredFeatures.getOrThrow(EOConfiguredFeatures.RED_SEAGRASS_PATCH_KEY);
 
         register(context, RED_SEAGRASS_PATCH_PLACED_KEY, redSeagrassPatch, List.of(
-                NoiseBasedCountPlacement.of(2, 80.0D, 0.25D),
+                NoiseBasedCountPlacement.of(4, 80.0D, 0.25D),
                 InSquarePlacement.spread(),
                 PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
                 BiomeFilter.biome()));
@@ -62,6 +64,12 @@ public class EOPlacedFeatures {
         register(context, OCEAN_WILLOW_PLACED_KEY, configuredFeatures.getOrThrow(EOConfiguredFeatures.OCEAN_WILLOW_KEY),
                 oceanTreePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                         EOBlocks.OCEAN_WILLOW_SAPLING.get()));
+
+        register(context, WHITE_SANDSTONE_HOURGLASS_PILLAR_KEY, configuredFeatures.getOrThrow(EOConfiguredFeatures.WHITE_SANDSTONE_HOURGLASS_PILLAR), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                PlacementUtils.HEIGHTMAP_OCEAN_FLOOR,
+                BiomeFilter.biome()));
     }
 
 

@@ -9,6 +9,8 @@ import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.origin.expandedoceans.ExpandedOceans;
 import net.origin.expandedoceans.worldgen.*;
+import net.origin.expandedoceans.worldgen.biomes.EOBiomes;
+import net.origin.expandedoceans.worldgen.biomes.EOWorldgenModifiers;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;

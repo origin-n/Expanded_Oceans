@@ -1,4 +1,4 @@
-package net.origin.expandedoceans.worldgen;
+package net.origin.expandedoceans.worldgen.biomes;
 
 import dev.worldgen.lithostitched.api.registry.LithostitchedRegistries;
 import dev.worldgen.lithostitched.api.util.InjectionType;
@@ -8,6 +8,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.origin.expandedoceans.ExpandedOceans;
+import net.origin.expandedoceans.worldgen.biomes.EOSurfaceRuleData;
 
 public class EOWorldgenModifiers {
     public static final ResourceKey<WorldgenModifier> SURFACE_RULES = registerKey("surface_rules");

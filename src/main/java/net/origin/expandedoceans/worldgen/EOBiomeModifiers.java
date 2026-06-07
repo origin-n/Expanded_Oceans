@@ -14,14 +14,20 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class EOBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_RED_SEAGRASS_PATCH = registerKey("add_red_seagrass");
+    public static final ResourceKey<BiomeModifier> ADD_SPARSE_RED_SEAGRASS_PATCH = registerKey("add_sparse_red_seagrass");
     public static final ResourceKey<BiomeModifier> ADD_OCEAN_WILLOW_TREE = registerKey("add_ocean_willow");
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
         context.register(ADD_RED_SEAGRASS_PATCH, new BiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.DEEP_OCEAN)),
+                HolderSet.direct(biomes.getOrThrow(Biomes.BASALT_DELTAS)),
                 HolderSet.direct(placedFeatures.getOrThrow(EOPlacedFeatures.RED_SEAGRASS_PATCH_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_SPARSE_RED_SEAGRASS_PATCH, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.DEEP_OCEAN)),
+                HolderSet.direct(placedFeatures.getOrThrow(EOPlacedFeatures.SPARSE_RED_SEAGRASS_PATCH_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(ADD_OCEAN_WILLOW_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(

@@ -16,7 +16,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.origin.expandedoceans.block.EOBlocks;
 import net.origin.expandedoceans.item.EOCreativeModeTabs;
 import net.origin.expandedoceans.item.EOItems;
-import net.origin.expandedoceans.worldgen.EOLithostiched;
+import net.origin.expandedoceans.worldgen.biomes.EOLithostiched;
 import net.origin.expandedoceans.worldgen.custom_features.EOFeatures;
 import net.origin.expandedoceans.worldgen.tree.trunk.EOTrunkPlacers;
 import org.slf4j.Logger;

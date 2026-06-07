@@ -1,0 +1,41 @@
+{
+  "type": "expandedoceans:hourglass_pillar",
+  "config": {
+    "base_block": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "expandedoceans:white_sandstone"
+      }
+    },
+    "base_radius": {
+      "type": "minecraft:uniform",
+      "max_inclusive": 4,
+      "min_inclusive": 3
+    },
+    "bulge_chance": 0.5,
+    "cap_radius": {
+      "type": "minecraft:uniform",
+      "max_inclusive": 4,
+      "min_inclusive": 3
+    },
+    "distortion": true,
+    "drift": true,
+    "height": {
+      "type": "minecraft:uniform",
+      "max_inclusive": 10,
+      "min_inclusive": 5
+    },
+    "max_bulges": 2,
+    "neck_radius": {
+      "type": "minecraft:uniform",
+      "max_inclusive": 2,
+      "min_inclusive": 1
+    },
+    "top_block": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "expandedoceans:white_sand"
+      }
+    }
+  }
+}

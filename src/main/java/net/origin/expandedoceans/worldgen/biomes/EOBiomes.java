@@ -1,4 +1,4 @@
-package net.origin.expandedoceans.worldgen;
+package net.origin.expandedoceans.worldgen.biomes;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
@@ -10,6 +10,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.origin.expandedoceans.ExpandedOceans;
+import net.origin.expandedoceans.worldgen.EOPlacedFeatures;
 
 public class EOBiomes {
     public static final ResourceKey<Biome> RED_GRASSY_PLATEAUS = registerKey("red_grassy_plateaus");
@@ -31,6 +32,9 @@ public class EOBiomes {
         BiomeDefaultFeatures.commonSpawns(spawnBuilder);
 
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder(placedFeatures, context.lookup(Registries.CONFIGURED_CARVER));
+
+        biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES,
+                placedFeatures.getOrThrow(EOPlacedFeatures.WHITE_SANDSTONE_HOURGLASS_PILLAR_KEY));
 
         biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
                 placedFeatures.getOrThrow(EOPlacedFeatures.RED_SEAGRASS_PATCH_PLACED_KEY));

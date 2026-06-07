@@ -1,5 +1,5 @@
 {
-  "type": "expandedoceans:mod_seagrass",
+  "type": "expandedoceans:seagrass_configurable",
   "config": {
     "patch_attempts": 40,
     "patch_radius": 4,
